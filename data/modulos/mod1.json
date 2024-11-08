@@ -1,0 +1,45 @@
+{
+    "Pantallas":[
+        {
+            "Botones":[],
+            "Fondo":"imagenes/intro/fondointro.png",
+            "Script":{
+                    "path":"scripts/pant1.js",
+                    "Variables":[]
+            },
+            "Imagenes":[
+                {
+                    "path":"imagenes/intro/pant1/Lumina.png",
+                    "posx":500,
+                    "posy":400,
+                    "tamx":300,
+                    "tamy":300
+                }
+            ],
+            "Animaciones":[]
+        },
+        {
+            "Botones":[],
+            "Fondo":"imagenes/intro/fondointro.png",
+            "Script":{
+                    "path":"scripts/pant1.js",
+                    "Variables":[]
+            },
+            "Imagenes":[
+                {
+                    "path":"imagenes/intro/pant1/Lumina.png",
+                    "posx":500,
+                    "posy":400,
+                    "tamx":300,
+                    "tamy":300
+                }
+            ],
+            "Animaciones":[]
+        }
+    ],
+    "Script": {
+        "path": "scripts/pant1.js",
+        "Variables": []
+        },
+        "Siguiente": "mod2.json"
+}
