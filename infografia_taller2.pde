@@ -135,13 +135,14 @@ public class Animacion{
   int cooldown, t;
   boolean repite;
   
-  Animacion(PImage[] _imgs, Vector2 _pos, Vector2 _tam, boolean _repite){
+  Animacion(PImage[] _imgs, Vector2 _pos, Vector2 _tam, int _cooldown, boolean _repite){
     imgs = new Imagen[_imgs.length];
     for(int i=0; i<_imgs.length; i++){
       imgs[i] = new Imagen(_imgs[i],_pos,_tam);
     }
     id = 0;
     t = 0;
+    cooldown = _cooldown;
     repite = _repite;
   }
   
@@ -166,6 +167,7 @@ public class Animacion{
   }
   
   public void setId(int _id){id = _id;}
+  public void setCooldown(int _cooldown){cooldown=_cooldown;}
 }
 
 public class Time{

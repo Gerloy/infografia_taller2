@@ -68,7 +68,7 @@ public class Modulo {
           JSONObject frame = arr_frames.getJSONObject(o);
           frames[o] = loadImage(frame.getString("path"));
         }
-        anis[e] = new Animacion(frames, pos, tam, ani.getBoolean("repite"));
+        anis[e] = new Animacion(frames, pos, tam, ani.getInt("cooldown"), ani.getBoolean("repite"));
       }
       
       //Carga todo a la pantalla
