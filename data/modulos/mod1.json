@@ -12,8 +12,15 @@
                     "path":"imagenes/intro/pant1/Lumina.png",
                     "posx":500,
                     "posy":400,
-                    "tamx":300,
+                    "tamx":150,
                     "tamy":300
+                },
+                {
+                    "path":"imagenes/intro/pant1/logo.png",
+                    "posx":500,
+                    "posy":150,
+                    "tamx":100,
+                    "tamy":100
                 }
             ],
             "Animaciones":[]
@@ -40,6 +47,6 @@
     "Script": {
         "path": "scripts/pant1.js",
         "Variables": []
-        },
-        "Siguiente": "mod2.json"
+    },
+    "Siguiente": "mod2.json"
 }

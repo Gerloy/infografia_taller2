@@ -15,6 +15,7 @@ public class Modulo {
 
     for (int i=0; i<_pantallas.size(); i++) {
       JSONObject pan = _pantallas.getJSONObject(i);
+      //println(i);
 
       //Carga los botones
       JSONArray _botones = pan.getJSONArray("Botones");
@@ -51,14 +52,14 @@ public class Modulo {
       //Cargo las otras imagenes que va a haber en la pantalla
       JSONArray arr_imgs = pan.getJSONArray("Imagenes");
       Imagen[] imgs = new Imagen[arr_imgs.size()];
-      for (int e=0; i<arr_imgs.size(); i++){
+      for (int e=0; e<arr_imgs.size(); e++){
         JSONObject img = arr_imgs.getJSONObject(e);
         imgs[e] = new Imagen(loadImage(img.getString("path")),new Vector2(img.getFloat("posx"),img.getFloat("posy")),new Vector2(img.getFloat("tamx"),img.getFloat("tamy")));
       }
       //Cargamos las animaciones
-      JSONArray arr_anis = pan.getJSONArray("Imagenes");
+      JSONArray arr_anis = pan.getJSONArray("Animaciones");
       Animacion[] anis = new Animacion[arr_anis.size()];
-      for (int e=0; i<arr_anis.size(); i++){
+      for (int e=0; e<arr_anis.size(); e++){
         JSONObject ani = arr_anis.getJSONObject(e);
         Vector2 pos = new Vector2(ani.getFloat("posx"),ani.getFloat("posy"));
         Vector2 tam = new Vector2(ani.getFloat("tamx"),ani.getFloat("tamy"));
@@ -73,6 +74,7 @@ public class Modulo {
       
       //Carga todo a la pantalla
       pantallas[i] = new Pantalla(fondo, imgs, anis, botones, _manager, app, path_script, this);
+      println(i);
       //Le agregamos las variables a la pantalla
       JSONArray variables = script.getJSONArray("Variables");
       for (int o=0; o<variables.size(); o++) {
@@ -80,8 +82,10 @@ public class Modulo {
         pantallas[i].agregarVariable(var.getString("nombre"), var.getString("valor"));
       }
     }
+    
+    
     //Carga el script del modulo
-    JSONObject script = mod_file.getJSONObject("Script");
+    JSONObject script = mod_file.getJSONObject("Script"); //<>//
     String path_script = script.getString("path");
     
     //Creo el script engine del modulo
@@ -120,8 +124,8 @@ public class Modulo {
   }
 
   void update(Vector2 pos1, Vector2 pos2) {
+    println(pantalla); //<>//
     pantallas[pantalla].update(pos1, pos2);
-    println(pantalla);
   }
   
   void click(Vector2 pos){

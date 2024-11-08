@@ -8,7 +8,7 @@ public class Pantalla{
     Animacion[] animaciones;
     
 
-    Pantalla(PImage _fondo, Imagen[] _imagenes, Animacion[] _animaciones, Boton[] _botones, ScriptEngineManager _manager, infografia_taller2 app, String path_script, Modulo mod){
+    Pantalla(PImage _fondo, Imagen[] _imagenes, Animacion[] _animaciones, Boton[] _botones, ScriptEngineManager _manager, infografia_taller2 app, String path_script, Modulo mod) throws NullPointerException{
         fondo = _fondo;
         botones = _botones;
         imagenes = _imagenes;
@@ -43,6 +43,9 @@ public class Pantalla{
         for (Boton boton : botones){
             boton.draw();
         }
+        for (Imagen img : imagenes){
+          img.render();
+        }
     }
     
     void update(Vector2 pos1, Vector2 pos2){
@@ -65,6 +68,14 @@ public class Pantalla{
         if(boton.adentro(pos)){
           boton.click();
         }
+      }
+       //Hacemos el update del script de la pantalla
+      try{
+        metodos.invokeFunction("Click");
+      }catch(ScriptException ex){
+        ex.printStackTrace();
+      }catch(NoSuchMethodException ex){
+        println("No existe el metodo Click");
       }
     }
     
