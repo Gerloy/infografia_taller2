@@ -37,7 +37,9 @@
             "Animaciones":[
                 {
                     "Nombre": "flecha",
-                    "Frames": "5"
+                    "Frames": 5,
+                    "cooldown": 33,
+                    "repite": true
                 }
             ]
         },
