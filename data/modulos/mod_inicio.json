@@ -1,0 +1,81 @@
+{
+    "Pantallas":[
+        {
+            "Botones":[
+                {
+                    "posx": 20,
+                    "posy": 30,
+                    "tamx": 40,
+                    "tamy": 40,
+                    "colFR": 255,
+                    "colFG": 255,
+                    "colFB": 255,
+                    "colSR": 255,
+                    "colSG": 255,
+                    "colSB": 255,
+                    "Script": {
+                        "path": "scripts/boton1.js",
+                        "Variables": [
+                            {
+                                "nombre": "num",
+                                "valor": "32"
+                            },
+                            {
+                                "nombre": "pantir",
+                                "valor": "1"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "Fondo": "data/fondos/fon1.png",
+            "Script": {
+                "path": "scripts/pant1.js",
+                "Variables": []
+            },
+            "Imagenes":[],
+            "Animaciones":[
+                {
+                    "Nombre": "flecha",
+                    "Frames": "5"
+                }
+            ]
+        },
+
+        {
+            "Botones":[
+                {
+                    "posx": 20,
+                    "posy": 30,
+                    "tamx": 40,
+                    "tamy": 40,
+                    "colFR": 255,
+                    "colFG": 255,
+                    "colFB": 255,
+                    "colSR": 255,
+                    "colSG": 255,
+                    "colSB": 255,
+                    "Script": {
+                        "path": "scripts/boton1.js",
+                        "Variables": [
+                            {
+                                "nombre": "num",
+                                "valor": "32"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "Fondo": "data/fondos/fon1.png",
+            "Script": {
+                "path": "scripts/pant1.js",
+                "Variables": []
+            }
+        }
+    ],
+    "Script": {
+    "path": "scripts/pant1.js",
+    "Variables": []
+    },
+    "Siguiente": "mod2.json"
+}
