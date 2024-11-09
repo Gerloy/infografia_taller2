@@ -22,19 +22,22 @@ public class Pantalla{
         scriptEngine.put("modulo", mod);
         scriptEngine.put("pantalla", this);
         
-        //Carga el archivo del script como un String
-        String content = "";
-        {
-          String[] archivo = loadStrings(path_script);
-          for(String s : archivo){
-            content += s;
+        if (path_script != ""){
+          //Carga el archivo del script como un String
+          String content = "";
+          {
+            String[] archivo = loadStrings(path_script);
+            for(String s : archivo){
+              content += s;
+            }
           }
-        }
-        //Agrega el script al script engine
-        try{
-          scriptEngine.eval(content);
-        }catch(ScriptException ex){
-          ex.printStackTrace();
+          
+          //Agrega el script al script engine
+          try{
+            scriptEngine.eval(content);
+          }catch(ScriptException ex){
+            ex.printStackTrace();
+          }
         }
     }
 

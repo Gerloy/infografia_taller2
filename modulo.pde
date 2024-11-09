@@ -40,8 +40,6 @@ public class Modulo {
           JSONObject var = variables.getJSONObject(o);
           botones[e].agregarVariable(var.getString("nombre"), var.getString("valor"));
         }
-
-        println(this.getClass());
       }
 
       //Carga el fondo
@@ -94,25 +92,27 @@ public class Modulo {
 
     scriptEngine.put("sketch", app);
     scriptEngine.put("modulo", this);
-    //Carga el archivo del script como un String
-    String content = "";
-    {
-      String[] archivo = loadStrings(path_script);
-      for(String s : archivo){
-        content += s;
+    if(path_script != ""){
+      //Carga el archivo del script como un String
+      String content = "";
+      {
+        String[] archivo = loadStrings(path_script);
+        for(String s : archivo){
+          content += s;
+        }
       }
-    }
-    //Agrega el script al script engine
-    try{
-      scriptEngine.eval(content);
-    }catch(ScriptException ex){
-      ex.printStackTrace();
-    }
-    //Le agregamos las variables al modulo
-    JSONArray variables = script.getJSONArray("Variables");
-    for (int o=0; o<variables.size(); o++) {
-      JSONObject var = variables.getJSONObject(o);
-      this.agregarVariable(var.getString("nombre"), var.getString("valor"));
+      //Agrega el script al script engine
+      try{
+        scriptEngine.eval(content);
+      }catch(ScriptException ex){
+        ex.printStackTrace();
+      }
+      //Le agregamos las variables al modulo
+      JSONArray variables = script.getJSONArray("Variables");
+      for (int o=0; o<variables.size(); o++) {
+        JSONObject var = variables.getJSONObject(o);
+        this.agregarVariable(var.getString("nombre"), var.getString("valor"));
+      }
     }
     
     //Agrega el path al siguiente modulo
@@ -154,14 +154,16 @@ public class Modulo {
     }
   }
   
-  public int getPantalla() {
-    return pantalla;
-  }
-
+  
   //Estas funciones son las que usas en js para cambiar las variables
   public void setPantalla(int _e) {
     pantalla = _e;
   }
+  public int getPantalla() {
+    return pantalla;
+  }
+  
+  public int cantPantallas(){return pantallas.length;}
   
   public String getSig(){return sig;}
 }
