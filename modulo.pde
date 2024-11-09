@@ -85,7 +85,7 @@ public class Modulo {
     
     
     //Carga el script del modulo
-    JSONObject script = mod_file.getJSONObject("Script"); //<>//
+    JSONObject script = mod_file.getJSONObject("Script"); //<>// //<>//
     String path_script = script.getString("path");
     
     //Creo el script engine del modulo
@@ -124,12 +124,20 @@ public class Modulo {
   }
 
   void update(Vector2 pos1, Vector2 pos2) {
-    println(pantalla); //<>//
+    println(pantalla); //<>// //<>//
     pantallas[pantalla].update(pos1, pos2);
   }
   
   void click(Vector2 pos){
     pantallas[pantalla].click(pos);
+    try{
+        metodos.invokeFunction("Click");
+      }catch(ScriptException ex){
+        ex.printStackTrace();
+      }catch(NoSuchMethodException ex){
+        println("No existe el metodo Click");
+      }
+    
   }
 
   public void agregarVariable(String _nombre, String _valor) {
@@ -144,6 +152,10 @@ public class Modulo {
       println("No existe el metodo set"+_nombre);
       ex.printStackTrace();
     }
+  }
+  
+  public int getPantalla() {
+    return pantalla;
   }
 
   //Estas funciones son las que usas en js para cambiar las variables
