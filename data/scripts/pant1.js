@@ -1,5 +1,12 @@
 /*function Update(){}*/
 
 function Click(){
-    modulo.setPantalla(1);
+    /*
+    if (getPantalla >= ULTIMA-PANTALLA) {
+        
+    }
+    */ 
+    if (modulo.getPantalla() <= 1) {
+        modulo.setPantalla(modulo.getPantalla() + 1) 
+    }
 }
