@@ -9,11 +9,11 @@
             },
             "Imagenes":[
                 {
-                    "path":"imagenes/intro/pant1/Lumina.png",
-                    "posx":362,
-                    "posy":366,
-                    "tamx":562,
-                    "tamy":90
+                    "path":"imagenes/modulo2/pan1/mod2pant1.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
                 }
                 
             ],
@@ -33,37 +33,14 @@
             },
             "Imagenes":[
                 {
-                    "path":"imagenes/intro/pant1/Lumina.png",
-                    "posx":500,
-                    "posy":400,
-                    "tamx":300,
-                    "tamy":300
+                    "path":"imagenes/modulo2/pan2/mod2pant2.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
                 }
             ],
-            "Animaciones":[
-                {   
-                    "cooldown":66,
-                    "repite": true,
-                    "posx":500,
-                    "posy":400,
-                    "tamx":300,
-                    "tamy":300,
-                    "frames":[
-                        {
-                            "path":"imagenes/anis/prueba/flecha0.png"
-                        },
-                        {
-                            "path":"imagenes/anis/prueba/flecha1.png"
-                        },
-                        {
-                            "path":"imagenes/anis/prueba/flecha2.png"
-                        },
-                        {
-                            "path":"imagenes/anis/prueba/flecha3.png"
-                        }
-                    ]
-                }
-            ]
+            "Animaciones":[]
         },
 
 
@@ -77,7 +54,7 @@
             },
             "Imagenes":[
                 {
-                    "path":"imagenes/intro/pant3/mod1pant3.png",
+                    "path":"imagenes/modulo2/pan3/mod2pant3.png",
                     "posx":1,
                     "posy":1,
                     "tamx":1280,
@@ -97,7 +74,7 @@
             },
             "Imagenes":[
                 {
-                    "path":"imagenes/intro/pant4/mod1pant4.png",
+                    "path":"imagenes/modulo2/pan4/mod2pant4.png",
                     "posx":1,
                     "posy":1,
                     "tamx":1280,
@@ -117,7 +94,7 @@
             },
             "Imagenes":[
                 {
-                    "path":"imagenes/intro/pant5/mod1pant5.png",
+                    "path":"imagenes/modulo2/pan5/mod2pant5.png",
                     "posx":1,
                     "posy":1,
                     "tamx":1280,
@@ -137,9 +114,9 @@
         
     ],
     "Script": {
-        "path": "scripts/pant1.js",
+        "path": "scripts/pant3.js",
         "Variables": []
-    },
+    }
+    ,
     "Siguiente": "mod2.json"
-    
 }
