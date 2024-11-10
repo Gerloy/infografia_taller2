@@ -40,7 +40,30 @@
                     "tamy":300
                 }
             ],
-            "Animaciones":[]
+            "Animaciones":[
+                {   
+                    "cooldown":66,
+                    "repite": true,
+                    "posx":500,
+                    "posy":400,
+                    "tamx":300,
+                    "tamy":300,
+                    "frames":[
+                        {
+                            "path":"imagenes/anis/prueba/flecha0.png"
+                        },
+                        {
+                            "path":"imagenes/anis/prueba/flecha1.png"
+                        },
+                        {
+                            "path":"imagenes/anis/prueba/flecha2.png"
+                        },
+                        {
+                            "path":"imagenes/anis/prueba/flecha3.png"
+                        }
+                    ]
+                }
+            ]
         },
 
 
