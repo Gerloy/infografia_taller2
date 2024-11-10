@@ -117,5 +117,6 @@
         "path": "scripts/pant3.js",
         "Variables": []
     }
-    
+    ,
+    "Siguiente": "mod2.json"
 }
