@@ -1,0 +1,78 @@
+{
+    "Pantallas":[
+        {
+            "Botones":[],
+            "Fondo":"imagenes/intro/fondointro.png",
+            "Script":{
+                    "path":"scripts/vacio.js",
+                    "Variables":[]
+            },
+            "Imagenes":[
+                {
+                    "path":"imagenes/modulo3/pan1/mod3pant1.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
+                }
+                
+            ],
+            "Animaciones":[]
+        },
+
+
+
+
+
+        {
+            "Botones":[],
+            "Fondo":"imagenes/intro/fondointro.png",
+            "Script":{
+                    "path":"scripts/vacio.js",
+                    "Variables":[]
+            },
+            "Imagenes":[
+                {
+                    "path":"imagenes/modulo3/pan2/mod3pant2.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
+                }
+            ],
+            "Animaciones":[]
+        },
+
+
+
+        {
+            "Botones":[],
+            "Fondo":"imagenes/intro/fondointro.png",
+            "Script":{
+                    "path":"scripts/vacio.js",
+                    "Variables":[]
+            },
+            "Imagenes":[
+                {
+                    "path":"imagenes/modulo3/pan3/mod3pant3.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
+                }
+                
+            ],
+            "Animaciones":[]
+        }
+
+
+    
+        
+    ],
+    "Script": {
+        "path": "scripts/pant4.js",
+        "Variables": []
+    }
+    ,
+    "Siguiente": "mod2.json"
+}
