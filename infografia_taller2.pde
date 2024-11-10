@@ -19,7 +19,7 @@ void setup(){
     size(1280,720,P2D);
     frameRate(60);
     textAlign(CENTER);
-    path_mod = "data/modulos/mod1.json";
+    path_mod = "data/modulos/mod3.json";
     mod = new Modulo(path_mod, manager, this);
     estado = Estado.JUGANDO;
     pos1 = new Vector2(0,0);
