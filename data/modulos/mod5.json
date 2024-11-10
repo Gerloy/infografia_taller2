@@ -1,0 +1,219 @@
+{
+    "Pantallas":[
+        {
+            "Botones":[],
+            "Fondo":"imagenes/intro/fondointro.png",
+            "Script":{
+                    "path":"scripts/vacio.js",
+                    "Variables":[]
+            },
+            "Imagenes":[
+                {
+                    "path":"imagenes/modulo4/pan1/mod4pant1.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
+                }
+                
+            ],
+            "Animaciones":[]
+        },
+
+
+
+
+
+        {
+            "Botones":[],
+            "Fondo":"imagenes/intro/fondointro.png",
+            "Script":{
+                    "path":"scripts/vacio.js",
+                    "Variables":[]
+            },
+            "Imagenes":[
+                {
+                    "path":"imagenes/modulo4/pan2/mod4pant2.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
+                }
+            ],
+            "Animaciones":[]
+        },
+
+
+
+        {
+            "Botones":[],
+            "Fondo":"imagenes/intro/fondointro.png",
+            "Script":{
+                    "path":"scripts/vacio.js",
+                    "Variables":[]
+            },
+            "Imagenes":[
+                {
+                    "path":"imagenes/modulo4/pan3/mod4pant3.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
+                }
+                
+            ],
+            "Animaciones":[]
+        },
+
+        {
+            "Botones":[],
+            "Fondo":"imagenes/intro/fondointro.png",
+            "Script":{
+                    "path":"scripts/vacio.js",
+                    "Variables":[]
+            },
+            "Imagenes":[
+                {
+                    "path":"imagenes/modulo4/pan4/mod4pant4.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
+                }
+                
+            ],
+            "Animaciones":[]
+        },
+
+        {
+            "Botones":[],
+            "Fondo":"imagenes/intro/fondointro.png",
+            "Script":{
+                    "path":"scripts/vacio.js",
+                    "Variables":[]
+            },
+            "Imagenes":[
+                {
+                    "path":"imagenes/modulo4/pan5/mod4pant5.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
+                }
+                
+            ],
+            "Animaciones":[]
+        },
+
+        {
+            "Botones":[],
+            "Fondo":"imagenes/intro/fondointro.png",
+            "Script":{
+                    "path":"scripts/vacio.js",
+                    "Variables":[]
+            },
+            "Imagenes":[
+                {
+                    "path":"imagenes/modulo4/pan6/mod4pant6.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
+                }
+                
+            ],
+            "Animaciones":[]
+        },
+
+        {
+            "Botones":[],
+            "Fondo":"imagenes/intro/fondointro.png",
+            "Script":{
+                    "path":"scripts/vacio.js",
+                    "Variables":[]
+            },
+            "Imagenes":[
+                {
+                    "path":"imagenes/modulo4/pan7/mod4pant7.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
+                }
+                
+            ],
+            "Animaciones":[]
+        },
+
+        {
+            "Botones":[],
+            "Fondo":"imagenes/intro/fondointro.png",
+            "Script":{
+                    "path":"scripts/vacio.js",
+                    "Variables":[]
+            },
+            "Imagenes":[
+                {
+                    "path":"imagenes/modulo4/pan8/mod4pant8.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
+                }
+                
+            ],
+            "Animaciones":[]
+        },
+
+        {
+            "Botones":[],
+            "Fondo":"imagenes/intro/fondointro.png",
+            "Script":{
+                    "path":"scripts/vacio.js",
+                    "Variables":[]
+            },
+            "Imagenes":[
+                {
+                    "path":"imagenes/modulo4/pan9/mod4pant9.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
+                }
+                
+            ],
+            "Animaciones":[]
+        },
+
+
+        {
+            "Botones":[],
+            "Fondo":"imagenes/intro/fondointro.png",
+            "Script":{
+                    "path":"scripts/vacio.js",
+                    "Variables":[]
+            },
+            "Imagenes":[
+                {
+                    "path":"imagenes/modulo4/pan10/mod4pant10.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
+                }
+                
+            ],
+            "Animaciones":[]
+        }
+
+
+    
+        
+    ],
+    "Script": {
+        "path": "scripts/pant5.js",
+        "Variables": []
+    }
+    ,
+    "Siguiente": "mod2.json"
+}
