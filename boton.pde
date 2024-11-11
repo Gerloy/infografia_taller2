@@ -17,7 +17,7 @@ public class Boton{
         
         scriptEngine.put("sketch", app);
         scriptEngine.put("modulo", mod);
-        scriptEngine.put("boton", this);
+        scriptEngine.put("boton",this);
         
         if(path_script != ""){
           //Carga el archivo del script como un String
@@ -54,10 +54,17 @@ public class Boton{
 
     public void draw(){
         pushStyle();
-            fill(col_fill.r,col_fill.g,col_fill.b);
-            stroke(col_stroke.r,col_stroke.g,col_stroke.b);
+            fill(col_fill.r,col_fill.g,col_fill.b,col_fill.a);
+            stroke(col_stroke.r,col_stroke.g,col_stroke.b,col_stroke.a);
             rect(pos.x,pos.y,tam.x,tam.y);
         popStyle();
+        try{
+        metodos.invokeFunction("Dibujar");
+      }catch(ScriptException ex){
+        ex.printStackTrace();
+      }catch(NoSuchMethodException ex){
+        println("No existe el metodo Dibujar");
+      }
     }
     
     public void click(){
@@ -104,8 +111,8 @@ public class Boton{
     public Vector2 getTam(){return tam;}
     
     //setters
-    public void setColFill(int _r, int _g, int _b){ col_fill.setCol(_r,_g,_b);}
-    public void setColStroke(int _r, int _g, int _b){ col_stroke.setCol(_r,_g,_b);}
+    public void setColFill(int _r, int _g, int _b, int _a){ col_fill.setCol(_r,_g,_b,_a);}
+    public void setColStroke(int _r, int _g, int _b, int _a){ col_stroke.setCol(_r,_g,_b,_a);}
     
     public void setPos(Vector2 _pos){pos=_pos;}
     public void setTam(Vector2 _tam){tam=_tam;}

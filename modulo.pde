@@ -26,8 +26,8 @@ public class Modulo {
         float posy = bot.getFloat("posy");
         float tamx = bot.getFloat("tamx");
         float tamy = bot.getFloat("tamy");
-        Col col_fill = new Col(bot.getInt("colFR"), bot.getInt("colFG"), bot.getInt("colFB"));
-        Col col_stroke = new Col(bot.getInt("colSR"), bot.getInt("colSG"), bot.getInt("colSB"));
+        Col col_fill = new Col(bot.getInt("colFR"), bot.getInt("colFG"), bot.getInt("colFB"), bot.getInt("colFA"));
+        Col col_stroke = new Col(bot.getInt("colSR"), bot.getInt("colSG"), bot.getInt("colSB"), bot.getInt("colSA"));
 
         //Cosas del script
         JSONObject script = bot.getJSONObject("Script");
@@ -35,6 +35,7 @@ public class Modulo {
 
         botones[e] = new Boton(posx, posy, tamx, tamy, col_fill, col_stroke, _manager, app, path_script, this);
 
+        //botones[e].scriptEngine.put("boton", botones[e]);
         JSONArray variables = script.getJSONArray("Variables");
         for (int o=0; o<variables.size(); o++) {
           JSONObject var = variables.getJSONObject(o);

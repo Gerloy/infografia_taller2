@@ -38,7 +38,8 @@ void setup() {
   context.startGesture(SimpleOpenNI.GESTURE_HAND_RAISE);
   context.startGesture(SimpleOpenNI.GESTURE_CLICK);
 
-  path_mod = "data/modulos/mod1.json";
+  //path_mod = "data/modulos/mod1.json";
+  path_mod = "data/modulos/juego1.json";
   estado = Estado.MANDAR_A_CARGAR;
   pos1 = new Vector2(0, 0);
   pos2 = new Vector2(1000, 1000);
@@ -238,7 +239,7 @@ public Imagen[] cargarImagenesJuego2(Vector2 _pos, Vector2 _tam){
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //Clases para lo que se necesite
-public class Vector2 {
+public static class Vector2 {
   float x;
   float y;
 
@@ -262,25 +263,27 @@ public class Vector2 {
 }
 
 public class Col {
-  public int r, g, b;
+  public int r, g, b, a;
 
-  Col(int _r, int _g, int _b) {
+  Col(int _r, int _g, int _b, int _a) {
     r = _r;
     g = _g;
     b = _b;
+    a = _a;
   }
 
   //Estas funciones son las que usas en js para cambiar las variables
   //getter para usar en un momento especifico
   public int[] getCol() {
-    int[] arr = {r, g, b};
+    int[] arr = {r, g, b, a};
     return(arr);
   }
   //seter para usar en un momento especifico
-  public void setCol(int _r, int _g, int _b) {
+  public void setCol(int _r, int _g, int _b, int _a) {
     r = _r;
     g = _g;
     b = _b;
+    a = _a;
   }
 }
 
@@ -307,6 +310,10 @@ public class Imagen {
   public void render() {
     image(img, pos.x, pos.y, tam.x, tam.y);
   }
+}
+
+public Imagen hacerImagen(String _img, Vector2 _pos, Vector2 _tam){
+  return new Imagen(_img,_pos,_tam);
 }
 
 public class Animacion {
