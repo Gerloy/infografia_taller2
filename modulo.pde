@@ -52,7 +52,7 @@ public class Modulo {
       Imagen[] imgs = new Imagen[arr_imgs.size()];
       for (int e=0; e<arr_imgs.size(); e++){
         JSONObject img = arr_imgs.getJSONObject(e);
-        imgs[e] = new Imagen(loadImage(img.getString("path")),new Vector2(img.getFloat("posx"),img.getFloat("posy")),new Vector2(img.getFloat("tamx"),img.getFloat("tamy")));
+        imgs[e] = new Imagen(img.getString("path"),new Vector2(img.getFloat("posx"),img.getFloat("posy")),new Vector2(img.getFloat("tamx"),img.getFloat("tamy")));
       }
       //Cargamos las animaciones
       JSONArray arr_anis = pan.getJSONArray("Animaciones");
@@ -62,17 +62,17 @@ public class Modulo {
         Vector2 pos = new Vector2(ani.getFloat("posx"),ani.getFloat("posy"));
         Vector2 tam = new Vector2(ani.getFloat("tamx"),ani.getFloat("tamy"));
         JSONArray arr_frames = ani.getJSONArray("frames");
-        PImage[] frames = new PImage[arr_frames.size()];
+        String[] frames = new String[arr_frames.size()];
         for (int o=0; o<arr_frames.size(); o++){
           JSONObject frame = arr_frames.getJSONObject(o);
-          frames[o] = loadImage(frame.getString("path"));
+          frames[o] = frame.getString("path");
         }
         anis[e] = new Animacion(frames, pos, tam, ani.getInt("cooldown"), ani.getBoolean("repite"));
       }
       
       //Carga todo a la pantalla
       pantallas[i] = new Pantalla(fondo, imgs, anis, botones, _manager, app, path_script, this);
-      println(i);
+      //println(i);
       //Le agregamos las variables a la pantalla
       JSONArray variables = script.getJSONArray("Variables");
       for (int o=0; o<variables.size(); o++) {
@@ -124,7 +124,7 @@ public class Modulo {
   }
 
   void update(Vector2 pos1, Vector2 pos2) {
-    println(pantalla); //<>// //<>//
+    //println(pantalla); //<>// //<>//
     pantallas[pantalla].update(pos1, pos2);
   }
   

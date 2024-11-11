@@ -43,18 +43,16 @@ public class Pantalla{
 
     void draw(){
         image(fondo,0,0,width,height);
-        for (Boton boton : botones){
-            boton.draw();
-        }
-        for (Imagen img : imagenes){
-          img.render();
-        }
+        for (Boton boton : botones){boton.draw();}
+        
+        for (Imagen img : imagenes){img.render();}
+        
+        for (Animacion ani : animaciones){ani.render();}
     }
     
     void update(Vector2 pos1, Vector2 pos2){
-      for (Boton boton : botones){
-        boton.update(pos1,pos2);
-      }
+      for (Boton boton : botones){boton.update(pos1,pos2);}
+      for (Animacion ani : animaciones){ani.update();}
       
       //Hacemos el update del script de la pantalla
       try{
