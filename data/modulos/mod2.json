@@ -72,6 +72,486 @@
 
 
                     ]
+                },
+
+                {
+                    "cooldown":60,
+                    "repite": true,
+                    "posx":80,
+                    "posy":310,
+                    "tamx":545,
+                    "tamy":409,
+                    "frames":[
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/c944b16f01f53a7be5d75c37a6e1babf.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_001_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_002_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_003_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_004_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_005_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_006_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_007_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_008_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_009_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_010_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_011_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_012_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_013_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_014_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_015_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_016_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_017_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_018_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_019_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_020_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_021_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_022_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_023_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_024_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_025_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_026_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_027_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_028_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_029_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_030_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_031_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_032_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_033_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_034_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_035_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_036_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_037_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_038_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_039_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_040_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_041_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_042_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_043_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_044_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_045_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_046_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_047_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_048_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_049_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_050_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_051_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_052_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_053_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_054_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_055_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_056_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_057_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_058_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_059_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_060_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_061_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_062_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_063_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_064_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_065_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_066_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_067_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_068_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_069_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_070_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_071_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_072_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_073_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_074_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_075_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_076_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_077_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_078_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_079_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_080_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_081_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_082_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_083_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_084_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_085_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_086_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_087_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_088_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_089_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_090_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_091_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_092_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_093_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_094_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_095_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_096_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_097_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_098_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_099_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_100_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_101_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_102_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_103_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_104_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_105_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_106_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_107_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_108_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_109_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_110_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_111_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_112_delay-0.04s.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_113_delay-0.04s.png"
+                        },
+
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_114_delay-0.04s.png"
+                        },
+
+
+                        {
+                            "path":"imagenes/modulo1/pan1/cuerpo/frame_115_delay-0.04s.png"
+                        }
+
+
+
+
+                    ]
                 }
                 
             ]
