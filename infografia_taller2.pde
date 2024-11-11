@@ -18,7 +18,7 @@ String path_mod;
 ScriptEngineManager manager = new ScriptEngineManager();
 Vector2 pos1, pos2;
 Mano[] manos;
-Time time;
+public Time time;
 SimpleOpenNI context;
 Map<Integer, PVector>  handPathList = new HashMap<Integer, PVector>();
 
@@ -39,8 +39,13 @@ void setup() {
   context.startGesture(SimpleOpenNI.GESTURE_HAND_RAISE);
   context.startGesture(SimpleOpenNI.GESTURE_CLICK);
 
+<<<<<<< Updated upstream
   //path_mod = "data/modulos/mod1.json";
   path_mod = "data/modulos/mod1.json";
+=======
+  path_mod = "data/modulos/mod1.json";
+  //path_mod = "data/modulos/juego1.json";
+>>>>>>> Stashed changes
   estado = Estado.MANDAR_A_CARGAR;
   pos1 = new Vector2(0, 0);
   pos2 = new Vector2(1000, 1000);

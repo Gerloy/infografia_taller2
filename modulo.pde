@@ -122,11 +122,25 @@ public class Modulo {
 
   void draw() {
     pantallas[pantalla].draw();
+    try{
+        metodos.invokeFunction("Dibujar");
+      }catch(ScriptException ex){
+        ex.printStackTrace();
+      }catch(NoSuchMethodException ex){
+        println("No existe el metodo Dibujar");
+      }
   }
 
   void update(Vector2 pos1, Vector2 pos2) {
     //println(pantalla); //<>// //<>//
     pantallas[pantalla].update(pos1, pos2);
+    try{
+        metodos.invokeFunction("Update");
+      }catch(ScriptException ex){
+        ex.printStackTrace();
+      }catch(NoSuchMethodException ex){
+        println("No existe el metodo Update");
+      }
   }
   
   void click(Vector2 pos){

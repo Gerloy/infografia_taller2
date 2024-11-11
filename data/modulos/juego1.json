@@ -222,8 +222,21 @@
         } 
     ],
     "Script": {
-        "path": "scripts/vacio.js",
-        "Variables": []
+        "path": "scripts/juego1/general_juego1.js",
+        "Variables": [
+            {
+                "nombre": "time",
+                "valor": "0"
+            },
+            {
+                "nombre": "actual_time",
+                "valor": "0"
+            },
+            {
+                "nombre": "segs",
+                "valor": "0"
+            }
+        ]
     },
     "Siguiente": "mod2.json"
     
