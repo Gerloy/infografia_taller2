@@ -24,8 +24,10 @@ public class Modulo {
         JSONObject bot = _botones.getJSONObject(e);
         float posx = bot.getFloat("posx");
         float posy = bot.getFloat("posy");
+        Vector2 pos = escalar(new Vector2(posx,posy));
         float tamx = bot.getFloat("tamx");
         float tamy = bot.getFloat("tamy");
+        Vector2 tam = escalar(new Vector2(tamx,tamy));
         Col col_fill = new Col(bot.getInt("colFR"), bot.getInt("colFG"), bot.getInt("colFB"), bot.getInt("colFA"));
         Col col_stroke = new Col(bot.getInt("colSR"), bot.getInt("colSG"), bot.getInt("colSB"), bot.getInt("colSA"));
 
@@ -33,7 +35,7 @@ public class Modulo {
         JSONObject script = bot.getJSONObject("Script");
         String path_script = script.getString("path");
 
-        botones[e] = new Boton(posx, posy, tamx, tamy, col_fill, col_stroke, _manager, app, path_script, this);
+        botones[e] = new Boton(pos.x, pos.y, tam.x, tam.y, col_fill, col_stroke, _manager, app, path_script, this);
 
         //botones[e].scriptEngine.put("boton", botones[e]);
         JSONArray variables = script.getJSONArray("Variables");
@@ -53,7 +55,7 @@ public class Modulo {
       Imagen[] imgs = new Imagen[arr_imgs.size()];
       for (int e=0; e<arr_imgs.size(); e++){
         JSONObject img = arr_imgs.getJSONObject(e);
-        imgs[e] = new Imagen(img.getString("path"),new Vector2(img.getFloat("posx"),img.getFloat("posy")),new Vector2(img.getFloat("tamx"),img.getFloat("tamy")));
+        imgs[e] = new Imagen(img.getString("path"),escalar(new Vector2(img.getFloat("posx"),img.getFloat("posy"))),escalar(new Vector2(img.getFloat("tamx"),img.getFloat("tamy"))));
       }
       //Cargamos las animaciones
       JSONArray arr_anis = pan.getJSONArray("Animaciones");
@@ -68,7 +70,7 @@ public class Modulo {
           JSONObject frame = arr_frames.getJSONObject(o);
           frames[o] = frame.getString("path");
         }
-        anis[e] = new Animacion(frames, pos, tam, ani.getInt("cooldown"), ani.getBoolean("repite"));
+        anis[e] = new Animacion(frames, escalar(pos), escalar(tam), ani.getInt("cooldown"), ani.getBoolean("repite"));
       }
       
       //Carga todo a la pantalla
