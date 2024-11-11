@@ -12,7 +12,6 @@ function Click(){}
 function Dibujar(){
     
     sketch.texto((segs +":"+(((actual_time/1000)-segs).toFixed(2))*100), sketch.crearVector(653,68));
-    print(segs);
 }
 
 function settime(relleno){time = 0;}

@@ -23,7 +23,8 @@ SimpleOpenNI context;
 Map<Integer, PVector>  handPathList = new HashMap<Integer, PVector>();
 
 void setup() {
-  size(1280, 720, P2D);
+  //size(1280, 720, P2D);
+  fullScreen(P2D);
   frameRate(60);
   textAlign(CENTER);
   textSize(20);
@@ -39,13 +40,8 @@ void setup() {
   context.startGesture(SimpleOpenNI.GESTURE_HAND_RAISE);
   context.startGesture(SimpleOpenNI.GESTURE_CLICK);
 
-<<<<<<< Updated upstream
-  //path_mod = "data/modulos/mod1.json";
-  path_mod = "data/modulos/mod1.json";
-=======
   path_mod = "data/modulos/mod1.json";
   //path_mod = "data/modulos/juego1.json";
->>>>>>> Stashed changes
   estado = Estado.MANDAR_A_CARGAR;
   pos1 = new Vector2(0, 0);
   pos2 = new Vector2(1000, 1000);
@@ -97,7 +93,7 @@ void updateInfo() {
       for (int i=0; i<manos.length; i++) {
         if (manos[i]!=null) {
           if (manos[i].idCoincide(handId)) {
-            manos[i].setPos(new Vector2(map(p2d.x, 0, 640, 0, 1280), map(p2d.y, 0, 480, 0, 720)));
+            manos[i].setPos(escalar(new Vector2(map(p2d.x, 0, 640, 0, 1280), map(p2d.y, 0, 480, 0, 720))));
           }
         }
       }
@@ -159,7 +155,7 @@ void onCompletedGesture(SimpleOpenNI curContext, int gestureType, PVector pos)
   } else if (gestureType == SimpleOpenNI.GESTURE_CLICK) {
     PVector p2d = new PVector();
     context.convertRealWorldToProjective(pos, p2d);
-    Click(new Vector2(map(p2d.x, 0, 640, 0, 1280), map(p2d.y, 0, 480, 0, 720)));
+    Click(escalar(new Vector2(map(p2d.x, 0, 640, 0, 1280), map(p2d.y, 0, 480, 0, 720))));
   }
 }
 
@@ -238,7 +234,7 @@ public Imagen[] cargarImagenesJuego2(Vector2 _pos, Vector2 _tam){
   JSONArray arr = obj.getJSONArray("imagenes");
   Imagen[] imgs = new Imagen[arr.size()];
   for(int i=0;i<arr.size();i++){
-    imgs[i] = new Imagen(arr.getJSONObject(i).getString("path"),_pos,_tam);
+    imgs[i] = new Imagen(arr.getJSONObject(i).getString("path"),escalar(_pos),escalar(_tam));
   }
   return imgs;
 }
@@ -246,9 +242,12 @@ public Imagen[] cargarImagenesJuego2(Vector2 _pos, Vector2 _tam){
 public Vector2 crearVector(float x, float y){
   return new Vector2(x,y);
 }
-public void texto(String t, Vector2 pos){
+public void texto(String t, Vector2 _pos){
+  Vector2 pos = escalar(_pos);
   text(t,pos.x,pos.y);
 }
+
+public Vector2 escalar(Vector2 vec){return new Vector2(map(vec.x,0,1280,0,width),map(vec.y,0,720,0,height));}
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------
