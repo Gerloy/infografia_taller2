@@ -32,35 +32,134 @@
                     "Variables":[]
             },
             "Imagenes":[
-                {
-                    "path":"imagenes/intro/pant1/Lumina.png",
-                    "posx":500,
-                    "posy":400,
-                    "tamx":300,
-                    "tamy":300
-                }
+                
             ],
             "Animaciones":[
                 {   
-                    "cooldown":66,
+                    "cooldown":500,
                     "repite": true,
-                    "posx":500,
-                    "posy":400,
-                    "tamx":300,
-                    "tamy":300,
+                    "posx":323,
+                    "posy":55,
+                    "tamx":634,
+                    "tamy":634,
                     "frames":[
                         {
-                            "path":"imagenes/anis/prueba/flecha0.png"
+                            "path":"imagenes/intro/pant2/1.png"
                         },
+
                         {
-                            "path":"imagenes/anis/prueba/flecha1.png"
+                            "path":"imagenes/intro/pant2/2.png"
                         },
+
                         {
-                            "path":"imagenes/anis/prueba/flecha2.png"
+                            "path":"imagenes/intro/pant2/3.png"
                         },
+
                         {
-                            "path":"imagenes/anis/prueba/flecha3.png"
+                            "path":"imagenes/intro/pant2/4.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/5.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/6.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/7.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/8.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/9.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/10.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/11.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/12.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/13.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/14.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/15.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/16.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/17.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/18.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/19.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/20.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/21.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/22.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/23.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/24.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/25.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/26.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/27.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/28.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant2/29.png"
                         }
+
+
                     ]
                 }
             ]
@@ -85,7 +184,64 @@
                 }
                 
             ],
-            "Animaciones":[]
+            "Animaciones":[
+                {
+                    "cooldown":300,
+                    "repite": true,
+                    "posx":1043,
+                    "posy":510,
+                    "tamx":157,
+                    "tamy":157,
+                    "frames":[
+                        {
+                            "path":"imagenes/manitos/1.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/2.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/3.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/4.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/5.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/6.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/7.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/8.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/9.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/10.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/11.png"
+                        }
+
+
+                    ]
+                }
+                
+            ]
         },
         
         {
@@ -105,7 +261,64 @@
                 }
                 
             ],
-            "Animaciones":[]
+            "Animaciones":[
+                {
+                    "cooldown":300,
+                    "repite": true,
+                    "posx":1043,
+                    "posy":510,
+                    "tamx":157,
+                    "tamy":157,
+                    "frames":[
+                        {
+                            "path":"imagenes/manitos/1.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/2.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/3.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/4.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/5.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/6.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/7.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/8.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/9.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/10.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/11.png"
+                        }
+
+
+                    ]
+                }
+                
+            ]
         },
 
         {

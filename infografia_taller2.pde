@@ -194,7 +194,7 @@ void Click() {
 }
 
 void mouseClicked(){
-  mod.click(pos1);
+    mod.click(pos1);
 }
 
 //Con esta funcion se guarda la puntuacion de los juegos
