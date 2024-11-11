@@ -16,7 +16,7 @@
                     "colSB": 255,
                     "colSA": 255,
                     "Script": {
-                        "path": "scripts/boton_juego1.js",
+                        "path": "scripts/juego1/boton_juego1.js",
                         "Variables": [
                             {
                                 "nombre": "id",
@@ -25,6 +25,161 @@
                             {
                                 "nombre": "img",
                                 "valor": "imagenes/juego1/texto/palabra0.png"
+                            },
+                            {
+                                "nombre": "select",
+                                "valor": "0"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "posx": 277,
+                    "posy": 164,
+                    "tamx": 300,
+                    "tamy": 62,
+                    "colFR": 255,
+                    "colFG": 255,
+                    "colFB": 255,
+                    "colFA": 255,
+                    "colSR": 255,
+                    "colSG": 255,
+                    "colSB": 255,
+                    "colSA": 255,
+                    "Script": {
+                        "path": "scripts/juego1/boton_juego1.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "1"
+                            },
+                            {
+                                "nombre": "img",
+                                "valor": "imagenes/juego1/texto/palabra1.png"
+                            },
+                            {
+                                "nombre": "select",
+                                "valor": "0"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "posx": 543,
+                    "posy": 164,
+                    "tamx": 179,
+                    "tamy": 62,
+                    "colFR": 255,
+                    "colFG": 255,
+                    "colFB": 255,
+                    "colFA": 255,
+                    "colSR": 255,
+                    "colSG": 255,
+                    "colSB": 255,
+                    "colSA": 255,
+                    "Script": {
+                        "path": "scripts/juego1/boton_juego1.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "2"
+                            },
+                            {
+                                "nombre": "img",
+                                "valor": "imagenes/juego1/texto/palabra2.png"
+                            },
+                            {
+                                "nombre": "select",
+                                "valor": "0"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "posx": 690,
+                    "posy": 164,
+                    "tamx": 165,
+                    "tamy": 62,
+                    "colFR": 255,
+                    "colFG": 255,
+                    "colFB": 255,
+                    "colFA": 255,
+                    "colSR": 255,
+                    "colSG": 255,
+                    "colSB": 255,
+                    "colSA": 255,
+                    "Script": {
+                        "path": "scripts/juego1/boton_juego1.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "3"
+                            },
+                            {
+                                "nombre": "img",
+                                "valor": "imagenes/juego1/texto/palabra3.png"
+                            },
+                            {
+                                "nombre": "select",
+                                "valor": "0"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "posx": 826,
+                    "posy": 164,
+                    "tamx": 96,
+                    "tamy": 62,
+                    "colFR": 255,
+                    "colFG": 255,
+                    "colFB": 255,
+                    "colFA": 255,
+                    "colSR": 255,
+                    "colSG": 255,
+                    "colSB": 255,
+                    "colSA": 255,
+                    "Script": {
+                        "path": "scripts/juego1/boton_juego1.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "4"
+                            },
+                            {
+                                "nombre": "img",
+                                "valor": "imagenes/juego1/texto/palabra4.png"
+                            },
+                            {
+                                "nombre": "select",
+                                "valor": "0"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "posx": 903,
+                    "posy": 164,
+                    "tamx": 97,
+                    "tamy": 62,
+                    "colFR": 255,
+                    "colFG": 255,
+                    "colFB": 255,
+                    "colFA": 255,
+                    "colSR": 255,
+                    "colSG": 255,
+                    "colSB": 255,
+                    "colSA": 255,
+                    "Script": {
+                        "path": "scripts/juego1/boton_juego1.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "5"
+                            },
+                            {
+                                "nombre": "img",
+                                "valor": "imagenes/juego1/texto/palabra5.png"
                             },
                             {
                                 "nombre": "select",
@@ -43,9 +198,23 @@
                 {
                     "path":"imagenes/juego1/cosas/consigna.png",
                     "posx":0,
-                    "posy":630,
+                    "posy":625,
                     "tamx":627,
-                    "tamy":129
+                    "tamy":95
+                },
+                {
+                    "path":"imagenes/juego1/cosas/textbox.png",
+                    "posx":62,
+                    "posy":130,
+                    "tamx":1149,
+                    "tamy":453
+                },
+                {
+                    "path":"imagenes/juego1/cosas/cronometro.png",
+                    "posx":607,
+                    "posy":39,
+                    "tamx":91,
+                    "tamy":47
                 }
                 
             ],

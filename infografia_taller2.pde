@@ -26,6 +26,7 @@ void setup() {
   size(1280, 720, P2D);
   frameRate(60);
   textAlign(CENTER);
+  textSize(20);
   manos = new Mano[2];
 
   //Iniciamos todo
@@ -151,7 +152,9 @@ void onCompletedGesture(SimpleOpenNI curContext, int gestureType, PVector pos)
     int handId = context.startTrackingHand(pos);
     println("hand stracked: " + handId);
   } else if (gestureType == SimpleOpenNI.GESTURE_CLICK) {
-    Click();
+    PVector p2d = new PVector();
+    context.convertRealWorldToProjective(pos, p2d);
+    Click(new Vector2(map(p2d.x, 0, 640, 0, 1280), map(p2d.y, 0, 480, 0, 720)));
   }
 }
 
@@ -190,8 +193,8 @@ public void setModPath(String _path) {
   path_mod=_path;
 }
 
-void Click() {
-  mod.click(pos1);
+void Click(Vector2 pos) {
+  mod.click(pos);
 }
 
 void mouseClicked(){
@@ -233,6 +236,13 @@ public Imagen[] cargarImagenesJuego2(Vector2 _pos, Vector2 _tam){
     imgs[i] = new Imagen(arr.getJSONObject(i).getString("path"),_pos,_tam);
   }
   return imgs;
+}
+
+public Vector2 crearVector(float x, float y){
+  return new Vector2(x,y);
+}
+public void texto(String t, Vector2 pos){
+  text(t,pos.x,pos.y);
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------
