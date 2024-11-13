@@ -105,6 +105,12 @@ void updateInfo() {
       manos[i].dibujar();
     }
   }
+  if (manos[0] != null){
+    pos1 = manos[0].pos;
+  }else{pos1 = new Vector2(2000,2000);}
+  if (manos[1] != null){
+    pos2 = manos[1].pos;
+  }else{pos2 = new Vector2(2000,2000);}
 }
 
 //Cuando aparece una mano nueva la metemos en el vector de manos
@@ -198,9 +204,9 @@ void Click(Vector2 pos) {
   mod.click(pos);
 }
 
-void mouseClicked(){
-    mod.click(pos1);
-}
+//void mouseClicked(){
+//    mod.click(pos1);
+//}
 
 //Con esta funcion se guarda la puntuacion de los juegos
 public void guardarPuntos(int p, String name){
