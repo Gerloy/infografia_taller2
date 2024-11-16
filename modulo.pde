@@ -15,7 +15,6 @@ public class Modulo {
 
     for (int i=0; i<_pantallas.size(); i++) {
       JSONObject pan = _pantallas.getJSONObject(i);
-      //println(i);
 
       //Carga los botones
       JSONArray _botones = pan.getJSONArray("Botones");
@@ -37,7 +36,6 @@ public class Modulo {
 
         botones[e] = new Boton(pos.x, pos.y, tam.x, tam.y, col_fill, col_stroke, _manager, app, path_script, this);
 
-        //botones[e].scriptEngine.put("boton", botones[e]);
         JSONArray variables = script.getJSONArray("Variables");
         for (int o=0; o<variables.size(); o++) {
           JSONObject var = variables.getJSONObject(o);
@@ -75,7 +73,6 @@ public class Modulo {
       
       //Carga todo a la pantalla
       pantallas[i] = new Pantalla(fondo, imgs, anis, botones, _manager, app, path_script, this);
-      //println(i);
       //Le agregamos las variables a la pantalla
       JSONArray variables = script.getJSONArray("Variables");
       for (int o=0; o<variables.size(); o++) {
@@ -86,7 +83,7 @@ public class Modulo {
     
     
     //Carga el script del modulo
-    JSONObject script = mod_file.getJSONObject("Script"); //<>// //<>//
+    JSONObject script = mod_file.getJSONObject("Script"); //<>//
     String path_script = script.getString("path");
     
     //Creo el script engine del modulo
@@ -133,8 +130,7 @@ public class Modulo {
       }
   }
 
-  void update(Vector2 pos1, Vector2 pos2) {
-    //println(pantalla); //<>// //<>//
+  void update(Vector2 pos1, Vector2 pos2) { //<>//
     pantallas[pantalla].update(pos1, pos2);
     try{
         metodos.invokeFunction("Update");
@@ -170,8 +166,7 @@ public class Modulo {
       ex.printStackTrace();
     }
   }
-  
-  
+
   //Estas funciones son las que usas en js para cambiar las variables
   public void setPantalla(int _e) {
     pantalla = _e;

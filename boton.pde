@@ -1,7 +1,6 @@
 public class Boton{
     private Vector2 pos, tam;
     private Col col_fill, col_stroke;
-    //TODO agregar scripts
     private ScriptEngine scriptEngine;
     private Invocable metodos;
 

@@ -1,6 +1,5 @@
 public class Pantalla{
     Boton[] botones;
-    //Text[] textos;
     PImage fondo;
     ScriptEngine scriptEngine;
     Invocable metodos;

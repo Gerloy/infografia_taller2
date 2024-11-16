@@ -23,8 +23,8 @@ SimpleOpenNI context;
 Map<Integer, PVector>  handPathList = new HashMap<Integer, PVector>();
 
 void setup() {
-  //size(1280, 720, P2D);
-  fullScreen(P2D);
+  size(1280, 720, P2D);
+  //fullScreen(P2D);
   frameRate(60);
   textAlign(CENTER);
   textSize(20);
@@ -46,6 +46,9 @@ void setup() {
   pos1 = new Vector2(0, 0);
   pos2 = new Vector2(1000, 1000);
   time = new Time();
+  
+  //Cosa para las fisicas y que se pueda jugar el tercer juego
+  Fisica.init(this);
 }
 
 void draw() {
@@ -186,6 +189,7 @@ void mandarACargar(){
 }
 
 void cargarModulo() { //<>//
+  mod = null;
   mod = new Modulo(path_mod, manager, this);
   estado = Estado.JUGANDO;
 }
