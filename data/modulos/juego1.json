@@ -819,7 +819,7 @@
             },
             {
                 "nombre": "actual_time",
-                "valor": "0"
+                "valor": "15000"
             },
             {
                 "nombre": "segs",

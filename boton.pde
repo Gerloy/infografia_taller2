@@ -25,6 +25,7 @@ public class Boton{
             String[] archivo = loadStrings(path_script);
             for(String s : archivo){
               content += s;
+              content += '\n';
             }
           }
           //Agrega el script al script engine

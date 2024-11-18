@@ -99,6 +99,7 @@ public class Modulo {
         String[] archivo = loadStrings(path_script);
         for(String s : archivo){
           content += s;
+          content += '\n';
         }
       }
       //Agrega el script al script engine
@@ -116,7 +117,7 @@ public class Modulo {
     }
     
     //Agrega el path al siguiente modulo
-    sig = mod_file.getString("Siguiente");
+    sig = "modulos/"+mod_file.getString("Siguiente");
   }
 
   void draw() {
@@ -126,7 +127,7 @@ public class Modulo {
       }catch(ScriptException ex){
         ex.printStackTrace();
       }catch(NoSuchMethodException ex){
-        println("No existe el metodo Dibujar");
+        println("No existe el metodo Dibujar en modulo");
       }
   }
 
@@ -173,6 +174,9 @@ public class Modulo {
   }
   public int getPantalla() {
     return pantalla;
+  }
+  public Pantalla getPantallaActual(){
+    return pantallas[pantalla];
   }
   
   public int cantPantallas(){return pantallas.length;}

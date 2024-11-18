@@ -1,10 +1,9 @@
-import java.util.Map;
+import java.util.Map; //<>//
 import java.util.Iterator;
 import javax.script.*;
 import java.lang.reflect.*;
 
 import SimpleOpenNI.*;
-import fisica.*;
 
 public enum Estado {
   CARGANDO, 
@@ -40,15 +39,12 @@ void setup() {
   context.startGesture(SimpleOpenNI.GESTURE_HAND_RAISE);
   context.startGesture(SimpleOpenNI.GESTURE_CLICK);
 
-  path_mod = "data/modulos/mod1.json";
-  //path_mod = "data/modulos/juego1.json";
+  //path_mod = "data/modulos/mod1.json";
+  path_mod = "data/modulos/juego3.json";
   estado = Estado.MANDAR_A_CARGAR;
   pos1 = new Vector2(0, 0);
   pos2 = new Vector2(1000, 1000);
   time = new Time();
-  
-  //Cosa para las fisicas y que se pueda jugar el tercer juego
-  Fisica.init(this);
 }
 
 void draw() {
@@ -70,8 +66,6 @@ void draw() {
     mod.update(pos1, pos2);
     mod.draw();
     updateInfo();
-    println(path_mod);
-    println(estado);
     break;
 
   default:
@@ -108,12 +102,16 @@ void updateInfo() {
       manos[i].dibujar();
     }
   }
-  if (manos[0] != null){
+  if (manos[0] != null) {
     pos1 = manos[0].pos;
-  }else{pos1 = new Vector2(2000,2000);}
-  if (manos[1] != null){
+  } else {
+    pos1 = new Vector2(2000, 2000);
+  }
+  if (manos[1] != null) {
     pos2 = manos[1].pos;
-  }else{pos2 = new Vector2(2000,2000);}
+  } else {
+    pos2 = new Vector2(2000, 2000);
+  }
 }
 
 //Cuando aparece una mano nueva la metemos en el vector de manos
@@ -184,11 +182,11 @@ void onLostHand(SimpleOpenNI curContext, int handId)
   }
 }
 
-void mandarACargar(){
+void mandarACargar() {
   estado = Estado.MANDAR_A_CARGAR;
 }
 
-void cargarModulo() { //<>//
+void cargarModulo() {
   mod = null;
   mod = new Modulo(path_mod, manager, this);
   estado = Estado.JUGANDO;
@@ -208,56 +206,78 @@ void Click(Vector2 pos) {
   mod.click(pos);
 }
 
-//void mouseClicked(){
-//    mod.click(pos1);
-//}
+void mouseClicked() {
+  mod.click(pos1);
+}
 
 //Con esta funcion se guarda la puntuacion de los juegos
-public void guardarPuntos(int p, String name){
+public void guardarPuntos(int p, String name) {
   JSONObject obj = new JSONObject();
-  obj.setInt("puntos",p);
+  obj.setInt("puntos", p);
   saveJSONObject(obj, "saves/"+name+".json");
 } 
 
 //Con esta funcion se carga la puntuacion de los juegos
-public int cargarPuntos(String name){
+public int cargarPuntos(String name) {
   JSONObject obj = loadJSONObject("saves/"+name+".json");
   return obj.getInt("puntos");
 }
 
 //Cosas para comunicar el segundo juego con el tercero (Lo hago aca porque no hay tiempo para hacerlo bien)
-public void guardarImagenes(String[] imagenes){
-  JSONObject obj = new JSONObject();
-  JSONArray arr = new JSONArray();
-  for(int i=0; i<imagenes.length;i++){
-    JSONObject img = new JSONObject();
-    img.setString("path",imagenes[i]);
-    arr.setJSONObject(i,img);
-  }
-  
-  obj.setJSONArray("imagenes",arr);
-  saveJSONObject(obj, "saves/imagenes_juego2.json");  
-}
+//public void guardarImagenes(String[] imagenes){
+//  JSONObject obj = new JSONObject();
+//  JSONArray arr = new JSONArray();
+//  for(int i=0; i<imagenes.length;i++){
+//    JSONObject img = new JSONObject();
+//    img.setString("path",imagenes[i]);
+//    arr.setJSONObject(i,img);
+//  }
 
-public Imagen[] cargarImagenesJuego2(Vector2 _pos, Vector2 _tam){
-  JSONObject obj = loadJSONObject("saves/imagenes_juego2.json");
-  JSONArray arr = obj.getJSONArray("imagenes");
-  Imagen[] imgs = new Imagen[arr.size()];
-  for(int i=0;i<arr.size();i++){
-    imgs[i] = new Imagen(arr.getJSONObject(i).getString("path"),escalar(_pos),escalar(_tam));
-  }
-  return imgs;
-}
+//  obj.setJSONArray("imagenes",arr);
+//  saveJSONObject(obj, "saves/imagenes_juego2.json");  
+//}
 
-public Vector2 crearVector(float x, float y){
-  return new Vector2(x,y);
+//public Imagen[] cargarImagenesJuego2(Vector2 _pos, Vector2 _tam){
+//  JSONObject obj = loadJSONObject("saves/imagenes_juego2.json");
+//  JSONArray arr = obj.getJSONArray("imagenes");
+//  Imagen[] imgs = new Imagen[arr.size()];
+//  for(int i=0;i<arr.size();i++){
+//    imgs[i] = new Imagen(arr.getJSONObject(i).getString("path"),escalar(_pos),escalar(_tam));
+//  }
+//  return imgs;
+//}
+
+public Vector2 crearVector(float x, float y) {
+  return new Vector2(x, y);
 }
-public void texto(String t, Vector2 _pos){
+public void texto(String t, Vector2 _pos) {
   Vector2 pos = escalar(_pos);
-  text(t,pos.x,pos.y);
+  text(t, pos.x, pos.y);
 }
 
-public Vector2 escalar(Vector2 vec){return new Vector2(map(vec.x,0,1280,0,width),map(vec.y,0,720,0,height));}
+public Boton crearBoton(Vector2 pos, Vector2 tam, Col fill, Col stroke, Modulo mod, String path) {
+  return new Boton(pos.x, pos.y, tam.x, tam.y, fill, stroke, manager, this, path, mod);
+}
+
+public Vector2 escalar(Vector2 vec) {
+  return new Vector2(map(vec.x, 0, 1280, 0, width), map(vec.y, 0, 720, 0, height));
+}
+
+public Col crearColor(int r, int g, int b, int a) {
+  return new Col(r, g, b, a);
+}
+
+public String leerArchivo(String path) {
+  String content = "";
+  {
+    String[] archivo = loadStrings(path);
+    for (String s : archivo) {
+      content += s;
+      content += '\n';
+    }
+  }
+  return content;
+}
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -336,8 +356,8 @@ public class Imagen {
   }
 }
 
-public Imagen hacerImagen(String _img, Vector2 _pos, Vector2 _tam){
-  return new Imagen(_img,_pos,_tam);
+public Imagen hacerImagen(String _img, Vector2 _pos, Vector2 _tam) {
+  return new Imagen(_img, _pos, _tam);
 }
 
 public class Animacion {
@@ -366,8 +386,8 @@ public class Animacion {
     if (t>=cooldown) {
       if (id<imgs.length-1) {
         id ++;
-      }else {
-        if (repite){
+      } else {
+        if (repite) {
           id = 0;
         }
       }

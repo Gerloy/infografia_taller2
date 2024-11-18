@@ -1,0 +1,86 @@
+{
+    "Pantallas": [
+        {
+            "Fondo": "imagenes/juego3/fondo.png",
+            "Botones": [
+                {
+                    "posx": 270,
+                    "posy": 455,
+                    "tamx": 164,
+                    "tamy": 62,
+                    "colFR": 11,
+                    "colFG": 35,
+                    "colFB": 59,
+                    "colFA": 255,
+                    "colSR": 11,
+                    "colSG": 35,
+                    "colSB": 59,
+                    "colSA": 255,
+                    "Script": {
+                        "path": "scripts/juego3/espacio_caja.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "24"
+                            },
+                            {
+                                "nombre": "img",
+                                "valor": ""
+                            },
+                            {
+                                "nombre": "activado",
+                                "valor": "0"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "Imagenes": [
+                {
+                    "path": "imagenes/juego3/cronometro.png",
+                    "posx": 607,
+                    "posy": 39,
+                    "tamx": 91,
+                    "tamy": 47
+                },
+                {
+                    "path": "imagenes/juego3/linea.png",
+                    "posx": 0,
+                    "posy": 231,
+                    "tamx": 1023,
+                    "tamy": 10
+                },
+                {
+                    "path": "imagenes/juego3/consigna.png",
+                    "posx": 81,
+                    "posy": 47,
+                    "tamx": 347,
+                    "tamy": 73
+                }
+            ],
+            "Animaciones": [],
+            "Script": {
+                "path": "scripts/juego3/general.js",
+                "Variables": [
+                    {
+                        "nombre": "time",
+                        "valor": "0"
+                    },
+                    {
+                        "nombre": "actual_time",
+                        "valor": "15000"
+                    },
+                    {
+                        "nombre": "segs",
+                        "valor": "0"
+                    }
+                ]
+            }
+        }
+    ],
+    "Script": {
+        "path": "scripts/vacio.js",
+        "Variables": []
+    },
+    "Siguiente": "mod4.json"
+}

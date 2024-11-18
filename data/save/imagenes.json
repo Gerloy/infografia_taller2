@@ -1,0 +1,12 @@
+{   
+    "imagenes":[
+        {
+            "path": "imagenes/juego1/texto/palabra0.png",
+            "id": 0
+        },
+        {
+            "path": "imagenes/juego1/texto/palabra1.png",
+            "id": 0
+        }
+    ]
+}
