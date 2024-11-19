@@ -1,12 +1,14 @@
 //Todo lo que se escriba fuera de una funcion se va a ejecutar una sola vez en el momento en que se cargue el script al ScriptEngine
-var inicializado = false;
+
+function Init(){
+    modulo.getPantallaActual().agregarBotonesAlArray(cargarImagenes(sketch.leerArchivo('/save/imagenes.json')));
+}
 
 function Update(){
-    if (!inicializado){inicializar();}
     updateTimer();
 }
 
-function Click(){}
+function Click(a){}
 
 function Dibujar(){
     
@@ -29,15 +31,9 @@ function updateTimer(){
     }
 }
 
-function inicializar(){
-    modulo.getPantallaActual().agregarBotonesAlArray(cargarImagenes(sketch.leerArchivo('/save/imagenes.json')));
-    inicializado = true;
-}
-
 //parsea el JSON y carga las imagenes como un array de botones y los devuelve
 function cargarImagenes(file){
     var json = JSON.parse(file);
-    //print(json.imagenes);
     var botones = [json.imagenes.length];
 
     for (var i=0;i<json.imagenes.length;i++){
@@ -47,7 +43,6 @@ function cargarImagenes(file){
         botones[i] = sketch.crearBoton(sketch.escalar(sketch.crearVector(82*i,638)),sketch.escalar(sketch.crearVector(82,82)),sketch.crearColor(0,0,0,255),sketch.crearColor(0,0,0,255),modulo,'scripts/juego3/caja.js');
 
         //Le agrego las variables que necesita porque el constructor no las va a cargar
-        botones[i].agregarVariable('activado','0');
         botones[i].agregarVariable('img',path);
         botones[i].agregarVariable('id',toString(id));
     }

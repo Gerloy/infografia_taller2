@@ -1,5 +1,6 @@
-function Update(){
-}
+function Init(){}
+
+function Update(){}
 
 function Dibujar(){
     if (select){

@@ -15,7 +15,7 @@ Modulo mod;
 Estado estado;
 String path_mod;
 ScriptEngineManager manager = new ScriptEngineManager();
-Vector2 pos1, pos2;
+public Vector2 pos1, pos2;
 Mano[] manos;
 public Time time;
 SimpleOpenNI context;
@@ -189,6 +189,7 @@ void mandarACargar() {
 void cargarModulo() {
   mod = null;
   mod = new Modulo(path_mod, manager, this);
+  mod.init();
   estado = Estado.JUGANDO;
 }
 
@@ -207,7 +208,9 @@ void Click(Vector2 pos) {
 }
 
 void mouseClicked() {
-  mod.click(pos1);
+  if(estado == Estado.JUGANDO){
+    mod.click(new Vector2(mouseX,mouseY));
+  }
 }
 
 //Con esta funcion se guarda la puntuacion de los juegos
@@ -246,6 +249,10 @@ public int cargarPuntos(String name) {
 //  }
 //  return imgs;
 //}
+
+public Mano[] getManos(){
+  return manos;
+}
 
 public Vector2 crearVector(float x, float y) {
   return new Vector2(x, y);
@@ -393,6 +400,10 @@ public class Animacion {
       }
       t-=cooldown;
     }
+    
+    //ESTO ES PARA PROBAR EL CLICK CON EL MOUSE
+    //DESCONECTARLO PARA USAR KINECT
+    pos1 = new Vector2(mouseX,mouseY);
   }
 
   public void render() {
@@ -422,6 +433,7 @@ public class Mano {
   public void setPos(Vector2 _pos) {
     pos = _pos;
   }
+  public Vector2 getPos(){return pos;}
 
   public void dibujar() {
     pushStyle();

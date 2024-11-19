@@ -1,3 +1,5 @@
+function Init(){}
+
 function Update(){
     actual_time -= sketch.time.DeltaTime();
     segs = Math.floor(actual_time/1000);

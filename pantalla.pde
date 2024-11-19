@@ -42,6 +42,21 @@ public class Pantalla {
     }
   }
 
+  public void init() {
+    //Hacemos el init del script de la pantalla
+    try {
+      metodos.invokeFunction("Init");
+    }
+    catch(ScriptException ex) {
+      ex.printStackTrace();
+    }
+    catch(NoSuchMethodException ex) {
+      println("No existe el metodo Init");
+    }
+    
+    for (Boton b : botones){b.init();}
+  }
+
   void draw() {
     image(fondo, 0, 0, width, height);
 
@@ -90,12 +105,12 @@ public class Pantalla {
   void click(Vector2 pos) {
     for (Boton boton : botones) {
       if (boton.adentro(pos)) {
-        boton.click();
+        boton.click(pos);
       }
     }
     //Hacemos el update del script de la pantalla
     try {
-      metodos.invokeFunction("Click");
+      metodos.invokeFunction("Click",pos);
     }
     catch(ScriptException ex) {
       ex.printStackTrace();

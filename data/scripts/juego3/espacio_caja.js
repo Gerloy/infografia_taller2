@@ -1,3 +1,7 @@
+var activado = false;
+
+function Init(){}
+
 function Update(){}
 
 function Dibujar(){}
@@ -6,13 +10,8 @@ function Click(){}
 
 function Hover(){}
 
-
 function setid(_num){
     id = parseInt(_num);
-}
-
-function setactivado(a){
-    activado = false;
 }
 
 function cambiaractivado(a){

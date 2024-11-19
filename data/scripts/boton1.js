@@ -1,3 +1,5 @@
+function Init(){}
+
 function Update(){
     modulo.setPantalla(1);
     boton.setColFill(0,128,128,100);

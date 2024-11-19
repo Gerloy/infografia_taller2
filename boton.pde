@@ -36,6 +36,17 @@ public class Boton{
           }
         }
     }
+    
+    public void init(){
+      //Hacemos el init del script del boton
+      try{
+        metodos.invokeFunction("Init");
+      }catch(ScriptException ex){
+        ex.printStackTrace();
+      }catch(NoSuchMethodException ex){
+        println("No existe el metodo Init");
+      }
+    }
         
     public void update(Vector2 pos1, Vector2 pos2){
       //Hacemos el update del script del boton
@@ -67,9 +78,9 @@ public class Boton{
       }
     }
     
-    public void click(){
+    public void click(Vector2 _pos){
       try{
-        metodos.invokeFunction("Click");
+        metodos.invokeFunction("Click",_pos);
       }catch(ScriptException ex){
         ex.printStackTrace();
       }catch(NoSuchMethodException ex){

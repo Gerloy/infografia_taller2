@@ -1,4 +1,5 @@
+function Init(){}
 function Update(){}
 function Dibujar(){}
 function Hover(){}
-function Click(){}
+function Click(a){}

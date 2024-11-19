@@ -1,4 +1,4 @@
-public class Modulo {
+public class Modulo { //<>// //<>//
   Pantalla[] pantallas;
   String sig;
   public int pantalla;
@@ -23,10 +23,10 @@ public class Modulo {
         JSONObject bot = _botones.getJSONObject(e);
         float posx = bot.getFloat("posx");
         float posy = bot.getFloat("posy");
-        Vector2 pos = escalar(new Vector2(posx,posy));
+        Vector2 pos = escalar(new Vector2(posx, posy));
         float tamx = bot.getFloat("tamx");
         float tamy = bot.getFloat("tamy");
-        Vector2 tam = escalar(new Vector2(tamx,tamy));
+        Vector2 tam = escalar(new Vector2(tamx, tamy));
         Col col_fill = new Col(bot.getInt("colFR"), bot.getInt("colFG"), bot.getInt("colFB"), bot.getInt("colFA"));
         Col col_stroke = new Col(bot.getInt("colSR"), bot.getInt("colSG"), bot.getInt("colSB"), bot.getInt("colSA"));
 
@@ -51,26 +51,26 @@ public class Modulo {
       //Cargo las otras imagenes que va a haber en la pantalla
       JSONArray arr_imgs = pan.getJSONArray("Imagenes");
       Imagen[] imgs = new Imagen[arr_imgs.size()];
-      for (int e=0; e<arr_imgs.size(); e++){
+      for (int e=0; e<arr_imgs.size(); e++) {
         JSONObject img = arr_imgs.getJSONObject(e);
-        imgs[e] = new Imagen(img.getString("path"),escalar(new Vector2(img.getFloat("posx"),img.getFloat("posy"))),escalar(new Vector2(img.getFloat("tamx"),img.getFloat("tamy"))));
+        imgs[e] = new Imagen(img.getString("path"), escalar(new Vector2(img.getFloat("posx"), img.getFloat("posy"))), escalar(new Vector2(img.getFloat("tamx"), img.getFloat("tamy"))));
       }
       //Cargamos las animaciones
       JSONArray arr_anis = pan.getJSONArray("Animaciones");
       Animacion[] anis = new Animacion[arr_anis.size()];
-      for (int e=0; e<arr_anis.size(); e++){
+      for (int e=0; e<arr_anis.size(); e++) {
         JSONObject ani = arr_anis.getJSONObject(e);
-        Vector2 pos = new Vector2(ani.getFloat("posx"),ani.getFloat("posy"));
-        Vector2 tam = new Vector2(ani.getFloat("tamx"),ani.getFloat("tamy"));
+        Vector2 pos = new Vector2(ani.getFloat("posx"), ani.getFloat("posy"));
+        Vector2 tam = new Vector2(ani.getFloat("tamx"), ani.getFloat("tamy"));
         JSONArray arr_frames = ani.getJSONArray("frames");
         String[] frames = new String[arr_frames.size()];
-        for (int o=0; o<arr_frames.size(); o++){
+        for (int o=0; o<arr_frames.size(); o++) {
           JSONObject frame = arr_frames.getJSONObject(o);
           frames[o] = frame.getString("path");
         }
         anis[e] = new Animacion(frames, escalar(pos), escalar(tam), ani.getInt("cooldown"), ani.getBoolean("repite"));
       }
-      
+
       //Carga todo a la pantalla
       pantallas[i] = new Pantalla(fondo, imgs, anis, botones, _manager, app, path_script, this);
       //Le agregamos las variables a la pantalla
@@ -80,32 +80,33 @@ public class Modulo {
         pantallas[i].agregarVariable(var.getString("nombre"), var.getString("valor"));
       }
     }
-    
-    
+
+
     //Carga el script del modulo
-    JSONObject script = mod_file.getJSONObject("Script"); //<>//
+    JSONObject script = mod_file.getJSONObject("Script");
     String path_script = script.getString("path");
-    
+
     //Creo el script engine del modulo
     scriptEngine = _manager.getEngineByName("JavaScript");
     metodos = (Invocable) scriptEngine;
 
     scriptEngine.put("sketch", app);
     scriptEngine.put("modulo", this);
-    if(path_script != ""){
+    if (path_script != "") {
       //Carga el archivo del script como un String
       String content = "";
       {
         String[] archivo = loadStrings(path_script);
-        for(String s : archivo){
+        for (String s : archivo) {
           content += s;
           content += '\n';
         }
       }
       //Agrega el script al script engine
-      try{
+      try {
         scriptEngine.eval(content);
-      }catch(ScriptException ex){
+      }
+      catch(ScriptException ex) {
         ex.printStackTrace();
       }
       //Le agregamos las variables al modulo
@@ -115,43 +116,62 @@ public class Modulo {
         this.agregarVariable(var.getString("nombre"), var.getString("valor"));
       }
     }
-    
+
     //Agrega el path al siguiente modulo
     sig = "modulos/"+mod_file.getString("Siguiente");
   }
 
-  void draw() {
-    pantallas[pantalla].draw();
-    try{
-        metodos.invokeFunction("Dibujar");
-      }catch(ScriptException ex){
-        ex.printStackTrace();
-      }catch(NoSuchMethodException ex){
-        println("No existe el metodo Dibujar en modulo");
-      }
+  public void init() {
+    //Hacemos el init del script del modulo
+    try {
+      metodos.invokeFunction("Init");
+    }
+    catch(ScriptException ex) {
+      ex.printStackTrace();
+    }
+    catch(NoSuchMethodException ex) {
+      println("No existe el metodo Init");
+    }
+    pantallas[pantalla].init();
   }
 
-  void update(Vector2 pos1, Vector2 pos2) { //<>//
-    pantallas[pantalla].update(pos1, pos2);
-    try{
-        metodos.invokeFunction("Update");
-      }catch(ScriptException ex){
-        ex.printStackTrace();
-      }catch(NoSuchMethodException ex){
-        println("No existe el metodo Update");
-      }
+  void draw() {
+    pantallas[pantalla].draw();
+    try {
+      metodos.invokeFunction("Dibujar");
+    }
+    catch(ScriptException ex) {
+      ex.printStackTrace();
+    }
+    catch(NoSuchMethodException ex) {
+      println("No existe el metodo Dibujar en modulo");
+    }
   }
-  
-  void click(Vector2 pos){
+
+  void update(Vector2 pos1, Vector2 pos2) {
+    pantallas[pantalla].update(pos1, pos2);
+    try {
+      metodos.invokeFunction("Update");
+    }
+    catch(ScriptException ex) {
+      ex.printStackTrace();
+    }
+    catch(NoSuchMethodException ex) {
+      println("No existe el metodo Update");
+    }
+  }
+
+  void click(Vector2 pos) {
     pantallas[pantalla].click(pos);
-    try{
-        metodos.invokeFunction("Click");
-      }catch(ScriptException ex){
-        ex.printStackTrace();
-      }catch(NoSuchMethodException ex){
-        println("No existe el metodo Click");
-      }
-    
+    try {
+      metodos.invokeFunction("Click",pos);
+    }
+    catch(ScriptException ex) {
+      ex.printStackTrace();
+    }
+    catch(NoSuchMethodException ex) {
+      println("No existe el metodo Click");
+    }
   }
 
   public void agregarVariable(String _nombre, String _valor) {
@@ -171,15 +191,20 @@ public class Modulo {
   //Estas funciones son las que usas en js para cambiar las variables
   public void setPantalla(int _e) {
     pantalla = _e;
+    pantallas[pantalla].init();
   }
   public int getPantalla() {
     return pantalla;
   }
-  public Pantalla getPantallaActual(){
+  public Pantalla getPantallaActual() {
     return pantallas[pantalla];
   }
-  
-  public int cantPantallas(){return pantallas.length;}
-  
-  public String getSig(){return sig;}
+
+  public int cantPantallas() {
+    return pantallas.length;
+  }
+
+  public String getSig() {
+    return sig;
+  }
 }
