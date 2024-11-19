@@ -2,7 +2,7 @@
 var inicializado = false;
 
 function Update(){
-    if (!inicializado){inicializar;}
+    if (!inicializado){inicializar();}
     updateTimer();
 }
 
@@ -32,19 +32,6 @@ function updateTimer(){
 function inicializar(){
     modulo.getPantallaActual().agregarBotonesAlArray(cargarImagenes(sketch.leerArchivo('/save/imagenes.json')));
     inicializado = true;
-}
-//lee el JSON y lo devuelve como texto
-function fetchJSON(){
-    //fetch('../../save/imagenes.json')
-    //    .then((res)=>{
-    //        if (!res.ok){
-    //            throw new Error("F");    
-    //        }
-    //        return res.json();
-    //    })
-    //    .catch((error)=> print("Pasaron cosas", error));
-    //var fr = new FileReader;
-    //return fr.readAsText('../../save/imagenes.json');
 }
 
 //parsea el JSON y carga las imagenes como un array de botones y los devuelve

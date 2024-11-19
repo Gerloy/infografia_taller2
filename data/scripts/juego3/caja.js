@@ -1,6 +1,8 @@
 function Update(){}
 
-function Dibujar(){}
+function Dibujar(){
+    img.render();
+}
 
 function Click(){}
 
