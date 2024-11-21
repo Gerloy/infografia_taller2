@@ -158,7 +158,66 @@
                 }
                 
             ],
-            "Animaciones":[]
+            "Animaciones":[
+                {
+                    "cooldown":300,
+                    "repite": true,
+                    "posx":1043,
+                    "posy":510,
+                    "tamx":157,
+                    "tamy":157,
+                    "frames":[
+                        {
+                            "path":"imagenes/manitos/1.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/2.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/3.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/4.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/5.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/6.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/7.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/8.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/9.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/10.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/11.png"
+                        }
+
+
+                    ]
+                }
+
+                
+                
+            ]
         },
 
 
@@ -236,6 +295,26 @@
             "Imagenes":[
                 {
                     "path":"imagenes/modulo2/pan5/mod2pant5.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
+                }
+                
+            ],
+            "Animaciones":[]
+        },
+
+        {
+            "Botones":[],
+            "Fondo":"imagenes/intro/fondointro.png",
+            "Script":{
+                    "path":"scripts/vacio.js",
+                    "Variables":[]
+            },
+            "Imagenes":[
+                {
+                    "path":"imagenes/modulo2/pan6/mod2pant6.png",
                     "posx":1,
                     "posy":1,
                     "tamx":1280,

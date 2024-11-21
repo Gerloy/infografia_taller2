@@ -120,6 +120,26 @@
                 
             ],
             "Animaciones":[]
+        },
+
+        {
+            "Botones":[],
+            "Fondo":"imagenes/intro/fondointro.png",
+            "Script":{
+                    "path":"scripts/vacio.js",
+                    "Variables":[]
+            },
+            "Imagenes":[
+                {
+                    "path":"imagenes/modulo3/pan4/mod3pant4.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
+                }
+                
+            ],
+            "Animaciones":[]
         }
 
 
