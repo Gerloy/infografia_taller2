@@ -72,6 +72,278 @@
 
 
                     ]
+                },
+
+                {
+                    "cooldown":60,
+                    "repite": true,
+                    "posx":3,
+                    "posy":500,
+                    "tamx":180,
+                    "tamy":150,
+                    "frames":[
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/b5db46949d9005be06ebf248ab1dbb00.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_01_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_02_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_03_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_04_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_05_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_06_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_07_delay-0.03s.png"
+                        },
+
+    
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_08_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_09_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_10_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_11_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_12_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_13_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_14_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_15_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_16_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_17_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_18_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_19_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_20_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_21_delay-0.03s.png"
+                        },
+
+                    
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_22_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_23_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_24_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_25_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_26_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_27_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_28_delay-0.03s.png"
+                        },
+
+                    
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_29_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_30_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_31_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_32_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_33_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_34_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_35_delay-0.03s.png"
+                        },
+
+                        
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_36_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_37_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_38_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_39_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_40_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_41_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_42_delay-0.03s.png"
+                        },
+
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_43_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_44_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_45_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_46_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_47_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_48_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_49_delay-0.03s.png"
+                        },
+
+                    
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_50_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_51_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_52_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_53_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_54_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_55_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_56_delay-0.03s.png"
+                        },
+
+                    
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_57_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_58_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_59_delay-0.03s.png"
+                        },
+
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_60_delay-0.03s.png"
+                        }
+
+                        
+
+                        
+
+                        
+
+
+                    ]
                 }
                 
             ]
