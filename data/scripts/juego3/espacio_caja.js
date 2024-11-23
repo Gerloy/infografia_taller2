@@ -1,14 +1,20 @@
 var activado = false;
+var hover = false;
+var img;
 
 function Init(){}
 
-function Update(){}
+function Update(){hover = false;}
 
-function Dibujar(){}
+function Dibujar(){
+    //if (activado){
+    //    img.renderizar();
+    //}
+}
 
-function Click(){}
+function Click(a){}
 
-function Hover(){}
+function Hover(){hover = true;}
 
 function setid(_num){
     id = parseInt(_num);
@@ -18,6 +24,11 @@ function cambiaractivado(a){
     activado = a;
 }
 
-function setimg(_selec){
-    img = sketch.hacerImagen(_selec,boton.getPos(),boton.getTam());
+function setimg(_img){
+    img = sketch.hacerImagen(_img,boton.getPos(),boton.getTam());
 }
+
+function getHover(){return hover}
+
+function getId(){return id;}
+function getActivado(){return activado;}

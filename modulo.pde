@@ -2,8 +2,8 @@ public class Modulo { //<>// //<>//
   Pantalla[] pantallas;
   String sig;
   public int pantalla;
-  ScriptEngine scriptEngine;
-  Invocable metodos;
+  public ScriptEngine scriptEngine;
+  public Invocable metodos;
 
 
   Modulo(String path, ScriptEngineManager _manager, infografia_taller2 app) {

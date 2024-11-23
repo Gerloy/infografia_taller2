@@ -39,7 +39,7 @@ void setup() {
   context.startGesture(SimpleOpenNI.GESTURE_HAND_RAISE);
   context.startGesture(SimpleOpenNI.GESTURE_CLICK);
 
-  path_mod = "data/modulos/mod1.json";
+  path_mod = "data/modulos/juego3.json";
   //path_mod = "data/modulos/mod2.json";
   estado = Estado.MANDAR_A_CARGAR;
   pos1 = new Vector2(0, 0);
