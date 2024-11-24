@@ -2,6 +2,29 @@
     "Pantallas": [
         {
             "Fondo": "imagenes/juego3/fondo.png",
+            "Botones":[],
+            "Animaciones":[],
+            "Imagenes":[
+                {
+                    "path": "imagenes/juego3/tutorial.png",
+                    "posx": 157,
+                    "posy": 141,
+                    "tamx": 1049,
+                    "tamy": 431
+                }
+            ],
+            "Script": {
+                "path": "scripts/tutorial_juegos.js",
+                "Variables": [
+                    {
+                        "nombre": "actual_time",
+                        "valor": "10000"
+                    }
+                ]
+            }
+        },
+        {
+            "Fondo": "imagenes/juego3/fondo.png",
             "Botones": [
                 {
                     "posx": 609,
@@ -198,7 +221,7 @@
                     },
                     {
                         "nombre": "actual_time",
-                        "valor": "15000"
+                        "valor": "30000"
                     },
                     {
                         "nombre": "segs",

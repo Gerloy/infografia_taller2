@@ -17,7 +17,7 @@ function Click(a){}
 
 function Dibujar(){
     //Mostrar texto del cronometro
-    sketch.texto((segs +":"+(((actual_time/1000)-segs).toFixed(2))*100), sketch.crearVector(653,68));
+    sketch.texto((segs +":"+parseInt((((actual_time/1000)-segs).toFixed(2))*100)), sketch.crearVector(653,68));
 }
 
 //Variables
@@ -67,7 +67,6 @@ function agregarCaja(_id){
     }
     for(var i=0;i<espacios.length;i++){
         if(!botones[i].metodos.invokeFunction("getActivado")){
-            print(botones[i].getPos().x + ", " +botones[i].getPos().y);
             caja.metodos.invokeFunction("setPosFinal", botones[i].getPos());
             botones[i].metodos.invokeFunction("cambiaractivado",true);
             break;
@@ -78,11 +77,9 @@ function agregarCaja(_id){
 function hayEspacioEnHover(){
     for(var i=0;i<espacios.length;i++){
         if(espacios[i].metodos.invokeFunction("getHover")){
-            print("hay hover");
             return true;
         }
     }
-    print("no hay hover");
     return false;
 }
 

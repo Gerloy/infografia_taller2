@@ -21,6 +21,10 @@ public Time time;
 SimpleOpenNI context;
 Map<Integer, PVector>  handPathList = new HashMap<Integer, PVector>();
 
+//Pantalla de carga
+PImage cargando;
+Animacion logo;
+
 void setup() {
   size(1280, 720, P2D);
   //fullScreen(P2D);
@@ -39,12 +43,20 @@ void setup() {
   context.startGesture(SimpleOpenNI.GESTURE_HAND_RAISE);
   context.startGesture(SimpleOpenNI.GESTURE_CLICK);
 
-  path_mod = "data/modulos/juego3.json";
+  path_mod = "data/modulos/juego2.json";
   //path_mod = "data/modulos/mod2.json";
   estado = Estado.MANDAR_A_CARGAR;
   pos1 = new Vector2(0, 0);
   pos2 = new Vector2(1000, 1000);
   time = new Time();
+  
+  //Cosas de la pantalla de carga
+  cargando = loadImage("imagenes/cargando/fondo.png");
+  String[] frames = new String[61];
+  for (int i=0;i<frames.length;i++){
+    frames[i]= "imagenes/cargando/ani/"+(i+1)+".png";
+  }
+  logo = new Animacion(frames,escalar(new Vector2(409,112)),escalar(new Vector2(487,365)),60,true);
 }
 
 void draw() {
@@ -52,7 +64,10 @@ void draw() {
   time.update();
   switch(estado) {
   case CARGANDO:
-    text("Cargando", width*0.5, height*0.5);
+    //text("Cargando", width*0.5, height*0.5);
+    image(cargando,0,0,width,height);
+    logo.update();
+    logo.render();
     break;
 
   case MANDAR_A_CARGAR:
@@ -341,11 +356,13 @@ public class Col {
 public class Imagen {
   public PImage img;
   public Vector2 pos, tam;
+  public String path;
 
   Imagen(String _img, Vector2 _pos, Vector2 _tam) {
     img = loadImage(_img);
     pos = _pos;
     tam = _tam;
+    path = _img;
   }
 
   //Estas funciones son las que usas en js para cambiar las variables
@@ -361,6 +378,8 @@ public class Imagen {
   public void render() {
     image(img, pos.x, pos.y, tam.x, tam.y);
   }
+  
+  public String getPath(){return path;}
 }
 
 public Imagen hacerImagen(String _img, Vector2 _pos, Vector2 _tam) {
@@ -388,8 +407,6 @@ public class Animacion {
   //(si es que las tenes que usar. Pero creo que no deberia ser necesario quitando casos muuuuy expecificos)
   public void update() {
     t+=time.DeltaTime();
-    println("t= "+t);
-    println("deltatime= "+time.DeltaTime());
     if (t>=cooldown) {
       if (id<imgs.length-1) {
         id ++;

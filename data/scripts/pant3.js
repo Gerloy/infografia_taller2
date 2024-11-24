@@ -1,5 +1,6 @@
 function Init(){}
 function Update(){}
+function Dibujar(){}
 
 function Click(){ 
     if (modulo.getPantalla() < modulo.cantPantallas()-1) {

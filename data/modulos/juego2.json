@@ -1,0 +1,96 @@
+{
+    "Pantallas": [
+        {
+            "Fondo": "imagenes/juego3/fondo.png",
+            "Botones":[],
+            "Animaciones":[],
+            "Imagenes":[
+                {
+                    "path": "imagenes/juego2/tutorial.png",
+                    "posx": 157,
+                    "posy": 141,
+                    "tamx": 1049,
+                    "tamy": 431
+                }
+            ],
+            "Script": {
+                "path": "scripts/tutorial_juegos.js",
+                "Variables": [
+                    {
+                        "nombre": "actual_time",
+                        "valor": "2000"
+                    }
+                ]
+            }
+        },
+        {
+            "Fondo": "imagenes/juego2/fondo.png",
+            "Botones": [
+                {
+                    "posx": 432,
+                    "posy": 166,
+                    "tamx": 453,
+                    "tamy": 453,
+                    "colFR": 11,
+                    "colFG": 35,
+                    "colFB": 59,
+                    "colFA": 255,
+                    "colSR": 11,
+                    "colSG": 35,
+                    "colSB": 59,
+                    "colSA": 255,
+                    "Script": {
+                        "path": "scripts/juego2/imagen.js",
+                        "Variables": []
+                    }
+                }
+            ],
+            "Imagenes": [
+                {
+                    "path": "imagenes/juego2/cronometro.png",
+                    "posx": 607,
+                    "posy": 39,
+                    "tamx": 91,
+                    "tamy": 47
+                },
+                {
+                    "path": "imagenes/juego2/consigna.png",
+                    "posx": 81,
+                    "posy": 47,
+                    "tamx": 347,
+                    "tamy": 73
+                },
+                {
+                    "path": "imagenes/juego2/recuadro.png",
+                    "posx": 365,
+                    "posy": 121,
+                    "tamx": 567,
+                    "tamy": 567
+                }
+            ],
+            "Animaciones": [],
+            "Script": {
+                "path": "scripts/juego2/general.js",
+                "Variables": [
+                    {
+                        "nombre": "time",
+                        "valor": "0"
+                    },
+                    {
+                        "nombre": "actual_time",
+                        "valor": "30000"
+                    },
+                    {
+                        "nombre": "segs",
+                        "valor": "0"
+                    }
+                ]
+            }
+        }
+    ],
+    "Script": {
+        "path": "scripts/vacio.js",
+        "Variables": []
+    },
+    "Siguiente": "mod3.json"
+}

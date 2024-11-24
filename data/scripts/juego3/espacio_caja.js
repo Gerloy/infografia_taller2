@@ -6,11 +6,7 @@ function Init(){}
 
 function Update(){hover = false;}
 
-function Dibujar(){
-    //if (activado){
-    //    img.renderizar();
-    //}
-}
+function Dibujar(){}
 
 function Click(a){}
 
