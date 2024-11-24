@@ -49,7 +49,13 @@ function Click(_pos) {
             p_pos = sketch.pos1;
 
             activado = true;
-        }else{activado = false;}
+        }else{
+            var pant = modulo.getPantallaActual();
+            if(pant.metodos.invokeFunction("hayEspacioEnHover")){
+                pant.metodos.invokeFunction("agregarCaja",id);
+            }
+            activado = false;
+        }
     }
 }
 
@@ -57,6 +63,7 @@ function Hover(){}
 
 function setPosFinal(pos){
     boton.setPos(pos);
+    img.setPos(boton.getPos());
     colocado = true;
 }
 
@@ -78,4 +85,7 @@ function cambiaractivado(a) {
 function setimg(_selec) {
     img = sketch.hacerImagen(_selec, boton.getPos(), boton.getTam());
 }
+
+function getId(){return id;}
+function getActivado(){return activado;}
 

@@ -9,11 +9,10 @@ function Update(){
     }
 }
 
-function Click(){}
+function Click(a){}
 
 function Dibujar(){
-    
-    sketch.texto((segs +":"+(((actual_time/1000)-segs).toFixed(2))*100), sketch.crearVector(653,68));
+    sketch.texto((segs +":"+parseInt((((actual_time/1000)-segs).toFixed(2))*100)), sketch.crearVector(653,68));
 }
 
 function settime(relleno){time = 0;}

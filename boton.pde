@@ -1,8 +1,8 @@
 public class Boton{
     private Vector2 pos, tam;
     private Col col_fill, col_stroke;
-    private ScriptEngine scriptEngine;
-    private Invocable metodos;
+    public  ScriptEngine scriptEngine;
+    public  Invocable metodos;
 
     Boton(float _posx, float _posy,float _tamx, float _tamy, Col _col_fill, Col _col_stroke, ScriptEngineManager _manager, infografia_taller2 app, String path_script, Modulo mod){
         pos = new Vector2(_posx,_posy);

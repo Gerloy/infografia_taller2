@@ -1,8 +1,8 @@
 public class Pantalla {
   Boton[] botones;
   PImage fondo;
-  ScriptEngine scriptEngine;
-  Invocable metodos;
+  public ScriptEngine scriptEngine;
+  public Invocable metodos;
   Imagen[] imagenes;
   Animacion[] animaciones;
 
@@ -140,6 +140,10 @@ public class Pantalla {
   }
   public Animacion[] getAnimaciones() {
     return animaciones;
+  }
+  
+  public Boton[] getBotones(){
+    return botones;
   }
 
   //Esto va a servir para el 3er juego que tiene que cargar las imagenes del juego anterior
