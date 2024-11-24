@@ -322,7 +322,45 @@
 
 
         {
-            "Botones":[],
+            "Botones":[
+                {
+                    "posx":125,
+                    "posy":407,
+                    "tamx":469,
+                    "tamy":262,
+                    "colFR": 255,
+                    "colFG": 255,
+                    "colFB": 255,
+                    "colFA": 255,
+                    "colSR": 255,
+                    "colSG": 255,
+                    "colSB": 255,
+                    "colSA": 255,
+                    "Script": {
+                        "path": "scripts/boton_mod3.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "3"
+                            },
+                            {
+                                "nombre": "img",
+                                "valor": "imagenes/modulo3/pan2/ojoa.png"
+                            },
+                            {
+                                "nombre": "img_selec",
+                                "valor": "imagenes/modulo3/pan2/ojob.png"
+                            },
+                            {
+                                "nombre": "select",
+                                "valor": "4"
+                            }
+                        ]
+                    }
+                }
+
+
+            ],
             "Fondo":"imagenes/intro/fondointro.png",
             "Script":{
                     "path":"scripts/vacio.js",
