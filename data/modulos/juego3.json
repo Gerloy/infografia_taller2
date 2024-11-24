@@ -4,10 +4,10 @@
             "Fondo": "imagenes/juego3/fondo.png",
             "Botones": [
                 {
-                    "posx": 270,
-                    "posy": 455,
-                    "tamx": 164,
-                    "tamy": 62,
+                    "posx": 609,
+                    "posy": 660,
+                    "tamx": 79,
+                    "tamy": 79,
                     "colFR": 11,
                     "colFG": 35,
                     "colFB": 59,
@@ -26,10 +26,168 @@
                             {
                                 "nombre": "img",
                                 "valor": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "posx": 609,
+                    "posy": 581,
+                    "tamx": 79,
+                    "tamy": 79,
+                    "colFR": 11,
+                    "colFG": 35,
+                    "colFB": 59,
+                    "colFA": 255,
+                    "colSR": 11,
+                    "colSG": 35,
+                    "colSB": 59,
+                    "colSA": 255,
+                    "Script": {
+                        "path": "scripts/juego3/espacio_caja.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "24"
                             },
                             {
-                                "nombre": "activado",
-                                "valor": "0"
+                                "nombre": "img",
+                                "valor": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "posx": 609,
+                    "posy": 502,
+                    "tamx": 79,
+                    "tamy": 79,
+                    "colFR": 11,
+                    "colFG": 35,
+                    "colFB": 59,
+                    "colFA": 255,
+                    "colSR": 11,
+                    "colSG": 35,
+                    "colSB": 59,
+                    "colSA": 255,
+                    "Script": {
+                        "path": "scripts/juego3/espacio_caja.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "24"
+                            },
+                            {
+                                "nombre": "img",
+                                "valor": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "posx": 609,
+                    "posy": 423,
+                    "tamx": 79,
+                    "tamy": 79,
+                    "colFR": 11,
+                    "colFG": 35,
+                    "colFB": 59,
+                    "colFA": 255,
+                    "colSR": 11,
+                    "colSG": 35,
+                    "colSB": 59,
+                    "colSA": 255,
+                    "Script": {
+                        "path": "scripts/juego3/espacio_caja.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "24"
+                            },
+                            {
+                                "nombre": "img",
+                                "valor": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "posx": 609,
+                    "posy": 344,
+                    "tamx": 79,
+                    "tamy": 79,
+                    "colFR": 11,
+                    "colFG": 35,
+                    "colFB": 59,
+                    "colFA": 255,
+                    "colSR": 11,
+                    "colSG": 35,
+                    "colSB": 59,
+                    "colSA": 255,
+                    "Script": {
+                        "path": "scripts/juego3/espacio_caja.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "24"
+                            },
+                            {
+                                "nombre": "img",
+                                "valor": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "posx": 609,
+                    "posy": 265,
+                    "tamx": 79,
+                    "tamy": 79,
+                    "colFR": 11,
+                    "colFG": 35,
+                    "colFB": 59,
+                    "colFA": 255,
+                    "colSR": 11,
+                    "colSG": 35,
+                    "colSB": 59,
+                    "colSA": 255,
+                    "Script": {
+                        "path": "scripts/juego3/espacio_caja.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "24"
+                            },
+                            {
+                                "nombre": "img",
+                                "valor": ""
+                            }
+                        ]
+                    }
+                },
+                {
+                    "posx": 609,
+                    "posy": 186,
+                    "tamx": 79,
+                    "tamy": 79,
+                    "colFR": 11,
+                    "colFG": 35,
+                    "colFB": 59,
+                    "colFA": 255,
+                    "colSR": 11,
+                    "colSG": 35,
+                    "colSB": 59,
+                    "colSA": 255,
+                    "Script": {
+                        "path": "scripts/juego3/espacio_caja.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "24"
+                            },
+                            {
+                                "nombre": "img",
+                                "valor": ""
                             }
                         ]
                     }

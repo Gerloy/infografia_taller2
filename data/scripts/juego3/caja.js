@@ -1,6 +1,7 @@
 //variables para la posicion del puntero que interactue con el boton
 var p_pos;
 var activado = false;
+var colocado = false;
 var mano;
 
 function Init() {
@@ -8,19 +9,21 @@ function Init() {
 }
 
 function Update() {
-    if (activado){
-        //ESTO ES NECESARIO PARA QUE ANDE CON KINECT
-        //DESCOMENTAR PARA PROBARLO CON EL KINECT
-        //boton.setPos(sketch.crearVector(boton.getPos().x+(mano.getPos().x-p_pos.x),boton.getPos().y+(mano.getPos().y-p_pos.y)));
-        //p_pos = mano.getPos();
+    if (!colocado){
+        if (activado){
+            //ESTO ES NECESARIO PARA QUE ANDE CON KINECT
+            //DESCOMENTAR PARA PROBARLO CON EL KINECT
+            //boton.setPos(sketch.crearVector(boton.getPos().x+(mano.getPos().x-p_pos.x),boton.getPos().y+(mano.getPos().y-p_pos.y)));
+            //p_pos = mano.getPos();
 
-        //ESTO ES PARA PROBAR CON EL MOUSE
-        //COMENTARLO PARA PROBAR CON EL KINECT
-        boton.setPos(sketch.crearVector(boton.getPos().x+(sketch.pos1.x-p_pos.x),boton.getPos().y+(sketch.pos1.y-p_pos.y)));
-        p_pos = sketch.pos1;
+            //ESTO ES PARA PROBAR CON EL MOUSE
+            //COMENTARLO PARA PROBAR CON EL KINECT
+            boton.setPos(sketch.crearVector(boton.getPos().x+(sketch.pos1.x-p_pos.x),boton.getPos().y+(sketch.pos1.y-p_pos.y)));
+            p_pos = sketch.pos1;
 
-        
-        img.setPos(boton.getPos());
+
+            img.setPos(boton.getPos());
+        }
     }
 }
 
@@ -29,26 +32,33 @@ function Dibujar() {
 }
 
 function Click(_pos) {
-    if (!activado) {
-        //ESTO ES NECESARIO PARA QUE ANDE CON KINECT
-        //DESCOMENTAR PARA PROBARLO CON EL KINECT
-        //var manos = sketch.getManos();
-        //for (i=0;i<manos.length;i++){
-        //    if ((manos[i]!=null) && (manos[i].getPos() == _pos)) {
-        //        mano = m;
-        //    }
-        //}
-        //p_pos = mano.getPos();
+    if(!colocado){
+        if (!activado) {
+            //ESTO ES NECESARIO PARA QUE ANDE CON KINECT
+            //DESCOMENTAR PARA PROBARLO CON EL KINECT
+            //var manos = sketch.getManos();
+            //for (i=0;i<manos.length;i++){
+            //    if ((manos[i]!=null) && (manos[i].getPos() == _pos)) {
+            //        mano = m;
+            //    }
+            //}
+            //p_pos = mano.getPos();
 
-        //ESTO ES PARA PROBAR CON EL MOUSE
-        //COMENTARLO PARA PROBAR CON EL KINECT
-        p_pos = sketch.pos1;
+            //ESTO ES PARA PROBAR CON EL MOUSE
+            //COMENTARLO PARA PROBAR CON EL KINECT
+            p_pos = sketch.pos1;
 
-        activado = true;
-    }else{activado = false;}
+            activado = true;
+        }else{activado = false;}
+    }
 }
 
-function Hover() { }
+function Hover(){}
+
+function setPosFinal(pos){
+    boton.setPos(pos);
+    colocado = true;
+}
 
 //Funcion para el foreach
 function formano(m){
@@ -61,10 +71,6 @@ function setid(_num) {
     id = parseInt(_num);
 }
 
-//function setactivado(a){
-//    activado = false;
-//}
-
 function cambiaractivado(a) {
     activado = a;
 }
@@ -72,3 +78,4 @@ function cambiaractivado(a) {
 function setimg(_selec) {
     img = sketch.hacerImagen(_selec, boton.getPos(), boton.getTam());
 }
+

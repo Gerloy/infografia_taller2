@@ -1,4 +1,5 @@
 //Todo lo que se escriba fuera de una funcion se va a ejecutar una sola vez en el momento en que se cargue el script al ScriptEngine
+var agarroCaja = false;
 
 function Init(){
     modulo.getPantallaActual().agregarBotonesAlArray(cargarImagenes(sketch.leerArchivo('/save/imagenes.json')));
@@ -49,3 +50,7 @@ function cargarImagenes(file){
 
     return botones;
 }
+
+//Cosas para cosas
+function agarraCaja(){agarroCaja=true;}
+function sueltaCaja(){agarroCaja=false;}
