@@ -1,4 +1,4 @@
-public class Modulo { //<>// //<>//
+public class Modulo { //<>// //<>// //<>// //<>//
   Pantalla[] pantallas;
   String sig;
   public int pantalla;
