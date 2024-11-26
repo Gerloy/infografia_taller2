@@ -29,8 +29,10 @@ function Dibujar(){
 function Hover(){}
 
 function Click(a){
-    imgs_selec.push(imgs[img_actual].getPath());
+    imgs_selec.push(imgs[img_actual]);
     imgs.splice(img_actual,1);
     img_actual = Math.floor(Math.random()*imgs.length);
     time = 0;
 }
+
+function getImgs_selec(){return imgs_selec;}

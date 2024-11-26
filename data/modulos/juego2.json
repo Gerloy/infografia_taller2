@@ -1,7 +1,7 @@
 {
     "Pantallas": [
         {
-            "Fondo": "imagenes/juego3/fondo.png",
+            "Fondo": "imagenes/juego2/fondo.png",
             "Botones":[],
             "Animaciones":[],
             "Imagenes":[
@@ -15,12 +15,7 @@
             ],
             "Script": {
                 "path": "scripts/tutorial_juegos.js",
-                "Variables": [
-                    {
-                        "nombre": "actual_time",
-                        "valor": "2000"
-                    }
-                ]
+                "Variables": []
             }
         },
         {
@@ -78,7 +73,7 @@
                     },
                     {
                         "nombre": "actual_time",
-                        "valor": "30000"
+                        "valor": "37000"
                     },
                     {
                         "nombre": "segs",

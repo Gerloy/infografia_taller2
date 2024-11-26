@@ -1,0 +1,102 @@
+{
+    "Pantallas": [
+        {
+            "Fondo": "imagenes/devolucion/fondo.png",
+            "Botones":[
+                {
+                    "posx": 106,
+                    "posy": 90,
+                    "tamx": 373,
+                    "tamy": 116,
+                    "colFR": 0,
+                    "colFG": 0,
+                    "colFB": 0,
+                    "colFA": 0,
+                    "colSR": 0,
+                    "colSG": 0,
+                    "colSB": 0,
+                    "colSA": 0,
+                    "Script": {
+                        "path": "scripts/devolucion/juego_hover.js",
+                        "Variables": [
+                            {
+                                "nombre": "img",
+                                "valor": "imagenes/devolucion/juego1.png"
+                            },
+                            {
+                                "nombre": "id",
+                                "valor": "0"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "posx": 106,
+                    "posy": 317,
+                    "tamx": 373,
+                    "tamy": 116,
+                    "colFR": 0,
+                    "colFG": 0,
+                    "colFB": 0,
+                    "colFA": 0,
+                    "colSR": 0,
+                    "colSG": 0,
+                    "colSB": 0,
+                    "colSA": 0,
+                    "Script": {
+                        "path": "scripts/devolucion/juego_hover.js",
+                        "Variables": [
+                            {
+                                "nombre": "img",
+                                "valor": "imagenes/devolucion/juego2.png"
+                            },
+                            {
+                                "nombre": "id",
+                                "valor": "1"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "posx": 106,
+                    "posy": 567,
+                    "tamx": 373,
+                    "tamy": 116,
+                    "colFR": 0,
+                    "colFG": 0,
+                    "colFB": 0,
+                    "colFA": 0,
+                    "colSR": 0,
+                    "colSG": 0,
+                    "colSB": 0,
+                    "colSA": 0,
+                    "Script": {
+                        "path": "scripts/devolucion/juego_hover.js",
+                        "Variables": [
+                            {
+                                "nombre": "img",
+                                "valor": "imagenes/devolucion/juego3.png"
+                            },
+                            {
+                                "nombre": "id",
+                                "valor": "2"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "Imagenes":[],
+            "Animaciones":[],
+            "Script": {
+                "path": "scripts/vacio.js",
+                "Variables": []
+            }
+        }
+    ],
+    "Script": {
+        "path": "scripts/devolucion/general.js",
+        "Variables": []
+    },
+    "Siguiente": "mod5.json"
+
+}
