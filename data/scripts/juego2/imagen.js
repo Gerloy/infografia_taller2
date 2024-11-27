@@ -2,7 +2,7 @@ var imgs = [];
 var imgs_selec = [];
 var img_actual = 0;
 
-var cooldown = 2000;
+var cooldown = 4000;
 var time = 0;
 
 function Init(){
