@@ -216,7 +216,7 @@
                     },
                     {
                         "nombre": "actual_time",
-                        "valor": "30000"
+                        "valor": "120000"
                     },
                     {
                         "nombre": "segs",

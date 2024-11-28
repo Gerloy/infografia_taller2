@@ -23,7 +23,9 @@ function Update(){
 }
 
 function Dibujar(){
+    if(imgs != null && img_actual != null){
     imgs[img_actual].render();
+    }
 }
 
 function Hover(){}
