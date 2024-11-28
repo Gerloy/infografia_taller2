@@ -18,29 +18,7 @@
                 
             ],
             "Animaciones":[
-                {
-                    "cooldown":300,
-                    "repite": true,
-                    "posx":1043,
-                    "posy":510,
-                    "tamx":157,
-                    "tamy":157,
-                    "frames":[
-                        {
-                            "path":"imagenes/manitos/1.png"
-                        },
-
-                        {
-                            "path":"imagenes/manitos/2.png"
-                        },
-
-                        {
-                            "path":"imagenes/manitos/3.png"
-                        }
-
-
-                    ]
-                },
+            
 
                 {
                     "cooldown":60,

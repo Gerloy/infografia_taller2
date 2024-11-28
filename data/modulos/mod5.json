@@ -470,7 +470,37 @@
                 }
                 
             ],
-            "Animaciones":[]
+            "Animaciones":[
+
+                {
+                    "cooldown":2000,
+                    "repite": true,
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720,
+                    "frames":[
+                        {
+                            "path":"imagenes/modulo4/pan3/mod4pant3.png"
+                        },
+
+
+                        {
+                            "path":"imagenes/modulo4/pan3/mod4pant3b.png"
+                        }
+
+                        
+                
+    
+
+                        
+
+                        
+
+
+                    ]
+                }
+            ]
         },
 
         {
@@ -481,16 +511,41 @@
                     "Variables":[]
             },
             "Imagenes":[
+                
+                
+            ],
+            "Animaciones":[
                 {
-                    "path":"imagenes/modulo4/pan4/mod4pant4.png",
+                    "cooldown":1500,
+                    "repite": true,
                     "posx":1,
                     "posy":1,
                     "tamx":1280,
-                    "tamy":720
-                }
+                    "tamy":720,
+                    "frames":[
+                        {
+                            "path":"imagenes/modulo4/pan4/mod4pant4.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo4/pan4/mod4pant4a.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo4/pan4/mod4pant4b.png"
+                        }
+
                 
-            ],
-            "Animaciones":[]
+    
+
+                        
+
+                        
+
+
+                    ]
+                }
+            ]
         },
 
         {
@@ -1495,7 +1550,7 @@
                 {
                     "cooldown":60,
                     "repite": true,
-                    "posx":486,
+                    "posx":489,
                     "posy":70,
                     "tamx":280,
                     "tamy":200,

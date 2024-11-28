@@ -19,29 +19,7 @@
                 
             ],
             "Animaciones":[
-                {
-                    "cooldown":300,
-                    "repite": true,
-                    "posx":1043,
-                    "posy":510,
-                    "tamx":157,
-                    "tamy":157,
-                    "frames":[
-                        {
-                            "path":"imagenes/manitos/1.png"
-                        },
-
-                        {
-                            "path":"imagenes/manitos/2.png"
-                        },
-
-                        {
-                            "path":"imagenes/manitos/3.png"
-                        }
-
-
-                    ]
-                },
+                
 
                 {
                     "cooldown":60,
@@ -382,7 +360,52 @@
                 }
                 
             ],
-            "Animaciones":[]
+            "Animaciones":[
+
+                {
+                    "cooldown":230,
+                    "repite": true,
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720,
+                    "frames":[
+                        {
+                            "path":"imagenes/modulo2/pan4/mod2pant4.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo2/pan4/mod2pant4a.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo2/pan4/mod2pant4b.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo2/pan4/mod2pant4c.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo2/pan4/mod2pant4d.png"
+                        },
+                        {
+                            "path":"imagenes/modulo2/pan4/mod2pant4e.png"
+                        },
+                        {
+                            "path":"imagenes/modulo2/pan4/mod2pant4f.png"
+                        }
+                
+    
+
+                        
+
+                        
+
+
+                    ]
+                }
+            ]
         },
 
         {

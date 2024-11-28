@@ -8,6 +8,16 @@
                     "Variables":[]
             },
             "Imagenes":[
+                
+                {
+                    "path":"imagenes/intro/pant1/holapa.png",
+                    "posx":1,
+                    "posy":1,
+                    "tamx":1280,
+                    "tamy":720
+                },
+
+
                 {
                     "path":"imagenes/intro/pant1/Lumina.png",
                     "posx":362,
@@ -288,6 +298,31 @@
 
 
                     ]
+                },
+
+
+                {
+                    "cooldown":300,
+                    "repite": true,
+                    "posx":1043,
+                    "posy":480,
+                    "tamx":157,
+                    "tamy":157,
+                    "frames":[
+                        {
+                            "path":"imagenes/manitos/1.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/2.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/3.png"
+                        }
+
+
+                    ]
                 }
                 
             ]
@@ -305,6 +340,13 @@
                     "Variables":[]
             },
             "Imagenes":[
+                 {
+                "path":"imagenes/intro/pant1/holapa.png",
+                "posx":1,
+                "posy":1,
+                "tamx":1280,
+                "tamy":720
+            }
                 
             ],
             "Animaciones":[
@@ -434,6 +476,30 @@
 
 
                     ]
+                },
+
+                {
+                    "cooldown":300,
+                    "repite": true,
+                    "posx":1043,
+                    "posy":480,
+                    "tamx":157,
+                    "tamy":157,
+                    "frames":[
+                        {
+                            "path":"imagenes/manitos/1.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/2.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/3.png"
+                        }
+
+
+                    ]
                 }
             ]
         },
@@ -462,7 +528,7 @@
                     "cooldown":300,
                     "repite": true,
                     "posx":1043,
-                    "posy":510,
+                    "posy":480,
                     "tamx":157,
                     "tamy":157,
                     "frames":[
@@ -507,7 +573,7 @@
                     "cooldown":300,
                     "repite": true,
                     "posx":1043,
-                    "posy":510,
+                    "posy":480,
                     "tamx":157,
                     "tamy":157,
                     "frames":[
@@ -796,6 +862,30 @@
                         
 
                         
+
+
+                    ]
+                },
+
+                {
+                    "cooldown":300,
+                    "repite": true,
+                    "posx":1043,
+                    "posy":480,
+                    "tamx":157,
+                    "tamy":157,
+                    "frames":[
+                        {
+                            "path":"imagenes/manitos/1.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/2.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/3.png"
+                        }
 
 
                     ]
@@ -1130,6 +1220,31 @@
                         
 
                         
+
+
+                    ]
+                },
+
+
+                {
+                    "cooldown":300,
+                    "repite": true,
+                    "posx":1043,
+                    "posy":480,
+                    "tamx":157,
+                    "tamy":157,
+                    "frames":[
+                        {
+                            "path":"imagenes/manitos/1.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/2.png"
+                        },
+
+                        {
+                            "path":"imagenes/manitos/3.png"
+                        }
 
 
                     ]
