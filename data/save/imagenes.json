@@ -1,12 +1,1 @@
-{   
-    "imagenes":[
-        {
-            "path": "imagenes/juego1/texto/palabra0.png",
-            "id": 0
-        },
-        {
-            "path": "imagenes/juego1/texto/palabra1.png",
-            "id": 0
-        }
-    ]
-}
+{"imagenes":[{"path":"imagenes/juego2/imgs_juego/7.png","id":0},{"path":"imagenes/juego2/imgs_juego/14.png","id":1},{"path":"imagenes/juego2/imgs_juego/22.png","id":2},{"path":"imagenes/juego2/imgs_juego/26.png","id":3}]}
