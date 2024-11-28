@@ -22,7 +22,23 @@ function updateTimer(){
     actual_time -= sketch.time.DeltaTime();
     segs = Math.floor(actual_time/1000);
     if (actual_time<=0){
+        guardarImagenes();
         sketch.setModPath(modulo.getSig());
         sketch.mandarACargar();
     }
+}
+
+function guardarImagenes(){
+    var imgs = pantalla.getBotones()[0].metodos.invokeFunction("getImgs_selec");
+    var dic = [];
+    for (var i=0; i<imgs.length; i++){
+        dic.push({
+            "path": imgs[i].getPath(),
+            "id": i
+        });
+    }
+    var imagenes = {"imagenes": dic};
+    var json = JSON.stringify(imagenes);
+    sketch.escribirArchivo('data/save/imagenes.json',json);
+
 }

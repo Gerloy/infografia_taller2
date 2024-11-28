@@ -15,12 +15,7 @@
             ],
             "Script": {
                 "path": "scripts/tutorial_juegos.js",
-                "Variables": [
-                    {
-                        "nombre": "actual_time",
-                        "valor": "10000"
-                    }
-                ]
+                "Variables": []
             }
         },
         {

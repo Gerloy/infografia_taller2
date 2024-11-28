@@ -7,8 +7,9 @@ import SimpleOpenNI.*;
 
 public enum Estado {
   CARGANDO, 
-    MANDAR_A_CARGAR, 
-    JUGANDO;
+  MANDAR_A_CARGAR, 
+  JUGANDO,
+  CARGAR_CARGANDO;
 }
 
 Modulo mod;
@@ -26,8 +27,8 @@ PImage cargando;
 Animacion logo;
 
 void setup() {
-  size(1280, 720, P2D);
-  //fullScreen(P2D);
+  //size(1280, 720, OPENGL);
+  fullScreen(P2D);
   frameRate(60);
   textAlign(CENTER);
   textSize(20);
@@ -43,20 +44,15 @@ void setup() {
   context.startGesture(SimpleOpenNI.GESTURE_HAND_RAISE);
   context.startGesture(SimpleOpenNI.GESTURE_CLICK);
 
-  path_mod = "data/modulos/mod5.json";
+
+
+  path_mod = "data/modulos/mod2.json";
+
   //path_mod = "data/modulos/mod2.json";
   estado = Estado.MANDAR_A_CARGAR;
   pos1 = new Vector2(0, 0);
   pos2 = new Vector2(1000, 1000);
   time = new Time();
-  
-  //Cosas de la pantalla de carga
-  cargando = loadImage("imagenes/cargando/fondo.png");
-  String[] frames = new String[61];
-  for (int i=0;i<frames.length;i++){
-    frames[i]= "imagenes/cargando/ani/"+(i+1)+".png";
-  }
-  logo = new Animacion(frames,escalar(new Vector2(409,112)),escalar(new Vector2(487,365)),60,true);
 }
 
 void draw() {
@@ -64,7 +60,6 @@ void draw() {
   time.update();
   switch(estado) {
   case CARGANDO:
-    //text("Cargando", width*0.5, height*0.5);
     image(cargando,0,0,width,height);
     logo.update();
     logo.render();
@@ -82,6 +77,17 @@ void draw() {
     mod.draw();
     updateInfo();
     break;
+    
+  case CARGAR_CARGANDO:
+    //Cosas de la pantalla de carga
+    cargando = loadImage("imagenes/cargando/fondo.png");
+    String[] frames = new String[61];
+    for (int i=0;i<frames.length;i++){
+      frames[i]= "imagenes/cargando/ani/"+(i+1)+".png";
+    }
+    logo = new Animacion(frames,escalar(new Vector2(409,112)),escalar(new Vector2(487,365)),60,true);
+    estado = Estado.MANDAR_A_CARGAR;
+  break;
 
   default:
     text("Rompiste todo pelotudo", width*0.5, height*0.5);
@@ -241,29 +247,11 @@ public int cargarPuntos(String name) {
   return obj.getInt("puntos");
 }
 
-//Cosas para comunicar el segundo juego con el tercero (Lo hago aca porque no hay tiempo para hacerlo bien)
-//public void guardarImagenes(String[] imagenes){
-//  JSONObject obj = new JSONObject();
-//  JSONArray arr = new JSONArray();
-//  for(int i=0; i<imagenes.length;i++){
-//    JSONObject img = new JSONObject();
-//    img.setString("path",imagenes[i]);
-//    arr.setJSONObject(i,img);
-//  }
-
-//  obj.setJSONArray("imagenes",arr);
-//  saveJSONObject(obj, "saves/imagenes_juego2.json");  
-//}
-
-//public Imagen[] cargarImagenesJuego2(Vector2 _pos, Vector2 _tam){
-//  JSONObject obj = loadJSONObject("saves/imagenes_juego2.json");
-//  JSONArray arr = obj.getJSONArray("imagenes");
-//  Imagen[] imgs = new Imagen[arr.size()];
-//  for(int i=0;i<arr.size();i++){
-//    imgs[i] = new Imagen(arr.getJSONObject(i).getString("path"),escalar(_pos),escalar(_tam));
-//  }
-//  return imgs;
-//}
+//Funcion para crear los archivos json que necesitemos
+public void escribirArchivo(String path, String contenido){
+  String[] cont= {contenido};
+  saveStrings(path, cont);
+}
 
 public Mano[] getManos(){
   return manos;
@@ -434,6 +422,8 @@ public class Animacion {
     cooldown=_cooldown;
   }
 }
+
+public Animacion crearAnimacion(String[] _imgs, Vector2 _pos, Vector2 _tam, int _cooldown, boolean _repite){return new Animacion(_imgs,_pos,_tam,_cooldown,_repite);};
 
 public class Mano {
   int id;

@@ -13,13 +13,13 @@ function Update() {
         if (activado){
             //ESTO ES NECESARIO PARA QUE ANDE CON KINECT
             //DESCOMENTAR PARA PROBARLO CON EL KINECT
-            //boton.setPos(sketch.crearVector(boton.getPos().x+(mano.getPos().x-p_pos.x),boton.getPos().y+(mano.getPos().y-p_pos.y)));
-            //p_pos = mano.getPos();
+            boton.setPos(sketch.crearVector(boton.getPos().x+(mano.getPos().x-p_pos.x),boton.getPos().y+(mano.getPos().y-p_pos.y)));
+            p_pos = mano.getPos();
 
             //ESTO ES PARA PROBAR CON EL MOUSE
             //COMENTARLO PARA PROBAR CON EL KINECT
-            boton.setPos(sketch.crearVector(boton.getPos().x+(sketch.pos1.x-p_pos.x),boton.getPos().y+(sketch.pos1.y-p_pos.y)));
-            p_pos = sketch.pos1;
+            //boton.setPos(sketch.crearVector(boton.getPos().x+(sketch.pos1.x-p_pos.x),boton.getPos().y+(sketch.pos1.y-p_pos.y)));
+            //p_pos = sketch.pos1;
 
 
             img.setPos(boton.getPos());
@@ -36,17 +36,17 @@ function Click(_pos) {
         if (!activado) {
             //ESTO ES NECESARIO PARA QUE ANDE CON KINECT
             //DESCOMENTAR PARA PROBARLO CON EL KINECT
-            //var manos = sketch.getManos();
-            //for (i=0;i<manos.length;i++){
-            //    if ((manos[i]!=null) && (manos[i].getPos() == _pos)) {
-            //        mano = m;
-            //    }
-            //}
-            //p_pos = mano.getPos();
+            var manos = sketch.getManos();
+            for (i=0;i<manos.length;i++){
+                if ((manos[i]!=null) && (manos[i].getPos() == _pos)) {
+                    mano = m;
+                }
+            }
+            p_pos = mano.getPos();
 
             //ESTO ES PARA PROBAR CON EL MOUSE
             //COMENTARLO PARA PROBAR CON EL KINECT
-            p_pos = sketch.pos1;
+            //p_pos = sketch.pos1;
 
             activado = true;
         }else{
