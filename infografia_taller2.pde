@@ -43,14 +43,8 @@ void setup() {
   //Estos son los dos gestos que voy a usar para la interaccion
   context.startGesture(SimpleOpenNI.GESTURE_HAND_RAISE);
   context.startGesture(SimpleOpenNI.GESTURE_CLICK);
-<<<<<<< Updated upstream
-
-  //path_mod = "data/modulos/devolucion.json";
-  path_mod = "data/modulos/juego3.json";
-=======
   
   path_mod = "data/modulos/mod5.json";
->>>>>>> Stashed changes
   estado = Estado.CARGAR_CARGANDO;
   pos1 = new Vector2(0, 0);
   pos2 = new Vector2(1000, 1000);
