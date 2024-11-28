@@ -312,31 +312,18 @@
 
 
                     ]
-                }
+				}
                 
             ]
-            
-
-            
         },
-
-
-
-
-
-
-
-
-
-
 
         {
             "Botones":[
                 {
-                    "posx":646,
-                    "posy":209,
-                    "tamx":565,
-                    "tamy":398,
+                    "posx":718,
+                    "posy":296,
+                    "tamx":530,
+                    "tamy":202,
                     "colFR": 255,
                     "colFG": 255,
                     "colFB": 255,
@@ -350,19 +337,19 @@
                         "Variables": [
                             {
                                 "nombre": "id",
-                                "valor": "3"
+                                "valor": "10"
                             },
                             {
                                 "nombre": "img",
-                                "valor": "imagenes/modulo4/pan1/hombress.png"
+                                "valor": "imagenes/modulo4/pan6/ellos.png"
                             },
                             {
                                 "nombre": "img_selec",
-                                "valor": "imagenes/modulo4/pan1/hombres.png"
+                                "valor": "imagenes/modulo4/pan6/elloss.png"
                             },
                             {
                                 "nombre": "select",
-                                "valor": "4"
+                                "valor": "12"
                             }
                         ]
                     }
@@ -377,7 +364,7 @@
             },
             "Imagenes":[
                 {
-                    "path":"imagenes/modulo4/pan1/mod4pant1.png",
+                    "path":"imagenes/modulo4/pan6/mod4pant6.png",
                     "posx":1,
                     "posy":1,
                     "tamx":1280,
@@ -385,9 +372,7 @@
                 }
                 
             ],
-            "Animaciones":[    
-                
-            ]
+            "Animaciones":[]
         },
         {
             "Botones":[
@@ -427,87 +412,34 @@
                     }
                 }
 
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_52_delay-0.03s.png"
+                        },
 
-            ],
-            "Fondo":"imagenes/intro/fondointro.png",
-            "Script":{
-                    "path":"scripts/vacio.js",
-                    "Variables":[]
-            },
-            "Imagenes":[
-                {
-                    "path":"imagenes/modulo4/pan2/mod4pant2.png",
-                    "posx":1,
-                    "posy":1,
-                    "tamx":1280,
-                    "tamy":720
-                }
-            ],
-            "Animaciones":[]
-        },
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_53_delay-0.03s.png"
+                        },
 
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_54_delay-0.03s.png"
+                        },
 
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_55_delay-0.03s.png"
+                        },
 
-        {
-            "Botones":[],
-            "Fondo":"imagenes/intro/fondointro.png",
-            "Script":{
-                    "path":"scripts/vacio.js",
-                    "Variables":[]
-            },
-            "Imagenes":[
-                {
-                    "path":"imagenes/modulo4/pan3/mod4pant3.png",
-                    "posx":1,
-                    "posy":1,
-                    "tamx":1280,
-                    "tamy":720
-                }
-                
-            ],
-            "Animaciones":[]
-        },
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_56_delay-0.03s.png"
+                        },
 
-        {
-            "Botones":[],
-            "Fondo":"imagenes/intro/fondointro.png",
-            "Script":{
-                    "path":"scripts/vacio.js",
-                    "Variables":[]
-            },
-            "Imagenes":[
-                {
-                    "path":"imagenes/modulo4/pan4/mod4pant4.png",
-                    "posx":1,
-                    "posy":1,
-                    "tamx":1280,
-                    "tamy":720
-                }
-                
-            ],
-            "Animaciones":[]
-        },
+                    
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_57_delay-0.03s.png"
+                        },
 
-        {
-            "Botones":[],
-            "Fondo":"imagenes/intro/fondointro.png",
-            "Script":{
-                    "path":"scripts/vacio.js",
-                    "Variables":[]
-            },
-            "Imagenes":[
-                {
-                    "path":"imagenes/modulo4/pan5/mod4pant5.png",
-                    "posx":1,
-                    "posy":1,
-                    "tamx":1280,
-                    "tamy":720
-                }
-                
-            ],
-            "Animaciones":[]
-        },
-
+                        {
+                            "path":"imagenes/intro/pant1/cuerpo/frame_58_delay-0.03s.png"
+                        },
         {
             "Botones":[
                 {
@@ -560,8 +492,7 @@
                     "tamy":720
                 }
                 
-            ],
-            "Animaciones":[]
+            ]
         },
 
         {

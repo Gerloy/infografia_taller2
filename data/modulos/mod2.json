@@ -372,16 +372,53 @@
                     "Variables":[]
             },
             "Imagenes":[
+            ],
+            "Animaciones":[
+
                 {
-                    "path":"imagenes/modulo1/pan4/mod2pant4.png",
+                    "cooldown":230,
+                    "repite": true,
                     "posx":1,
                     "posy":1,
                     "tamx":1280,
-                    "tamy":720
-                }
+                    "tamy":720,
+                    "frames":[
+                        {
+                            "path":"imagenes/modulo2/pan4/mod2pant4.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo2/pan4/mod2pant4a.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo2/pan4/mod2pant4b.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo2/pan4/mod2pant4c.png"
+                        },
+
+                        {
+                            "path":"imagenes/modulo2/pan4/mod2pant4d.png"
+                        },
+                        {
+                            "path":"imagenes/modulo2/pan4/mod2pant4e.png"
+                        },
+                        {
+                            "path":"imagenes/modulo2/pan4/mod2pant4f.png"
+                        }
                 
-            ],
-            "Animaciones":[]
+    
+
+                        
+
+                        
+
+
+                    ]
+                }
+            ]
         },
 
         {
