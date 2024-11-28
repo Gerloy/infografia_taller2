@@ -48,7 +48,7 @@ function cargarImagenes(file){
         var path = json.imagenes[i].path;
         var id = json.imagenes[i].id;
 
-        botones[i] = sketch.crearBoton(sketch.escalar(sketch.crearVector(82*i,638)),sketch.escalar(sketch.crearVector(79,79)),sketch.crearColor(0,0,0,255),sketch.crearColor(0,0,0,255),modulo,'scripts/juego3/caja.js');
+        botones[i] = sketch.crearBoton(sketch.escalar(sketch.crearVector(82*i,480)),sketch.escalar(sketch.crearVector(79,79)),sketch.crearColor(0,0,0,255),sketch.crearColor(0,0,0,255),modulo,'scripts/juego3/caja.js');
 
         //Le agrego las variables que necesita porque el constructor no las va a cargar
         botones[i].agregarVariable('img',path);

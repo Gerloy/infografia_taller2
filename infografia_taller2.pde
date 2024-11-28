@@ -43,9 +43,14 @@ void setup() {
   //Estos son los dos gestos que voy a usar para la interaccion
   context.startGesture(SimpleOpenNI.GESTURE_HAND_RAISE);
   context.startGesture(SimpleOpenNI.GESTURE_CLICK);
+<<<<<<< Updated upstream
 
   //path_mod = "data/modulos/devolucion.json";
   path_mod = "data/modulos/juego3.json";
+=======
+  
+  path_mod = "data/modulos/mod5.json";
+>>>>>>> Stashed changes
   estado = Estado.CARGAR_CARGANDO;
   pos1 = new Vector2(0, 0);
   pos2 = new Vector2(1000, 1000);
@@ -87,9 +92,9 @@ void draw() {
   case CARGAR_CARGANDO:
     //Cosas de la pantalla de carga
     cargando = loadImage("imagenes/cargando/fondo.png");
-    String[] frames = new String[61];
+    String[] frames = new String[29];
     for (int i=0;i<frames.length;i++){
-      frames[i]= "imagenes/cargando/ani/"+(i+1)+".png";
+      frames[i]= "imagenes/cargando/ani/"+(i)+".png";
     }
     logo = new Animacion(frames,escalar(new Vector2(409,112)),escalar(new Vector2(487,365)),60,true);
     estado = Estado.MANDAR_A_CARGAR;
@@ -106,7 +111,8 @@ void UPDATE(){ //<>//
   while(true){
     //println("actualiza");
     context.update();
-    updateInfo();
+    //updateInfo();
+    pos1=new Vector2(mouseX,mouseY);
     if (estado == Estado.JUGANDO){ //<>//
       mod.update(pos1, pos2);
     }

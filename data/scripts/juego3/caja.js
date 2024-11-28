@@ -51,8 +51,6 @@ function Click(_pos) {
 
             if(dist_pos1<dist_pos2){mano=1; p_pos=sketch.pos1;}else{mano=2; p_pos=sketch.pos2;}
 
-            //if (_pos == sketch.pos1){mano = 1; p_pos=sketch.pos1;}else if (_pos == sketch.pos2){mano = 2; p_pos=sketch.pos2;}
-
             //ESTO ES PARA PROBAR CON EL MOUSE
             //COMENTARLO PARA PROBAR CON EL KINECT
             //p_pos = sketch.pos1;
