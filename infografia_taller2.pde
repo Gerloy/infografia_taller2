@@ -27,8 +27,8 @@ PImage cargando;
 Animacion logo;
 
 void setup() {
-  //size(1280, 720, OPENGL);
-  fullScreen(P2D);
+  size(1280, 720, OPENGL);
+  //fullScreen(P2D);
   frameRate(60);
   textAlign(CENTER);
   textSize(20);
@@ -49,7 +49,7 @@ void setup() {
   path_mod = "data/modulos/mod2.json";
 
   //path_mod = "data/modulos/mod2.json";
-  estado = Estado.MANDAR_A_CARGAR;
+  estado = Estado.CARGAR_CARGANDO;
   pos1 = new Vector2(0, 0);
   pos2 = new Vector2(1000, 1000);
   time = new Time();
