@@ -1,4 +1,5 @@
 //Todo lo que se escriba fuera de una funcion se va a ejecutar una sola vez en el momento en que se cargue el script al ScriptEngine
+var inicio = false;
 var agarroCaja = false;
 var espacios;
 
@@ -7,10 +8,13 @@ function Init(){
     espacios = modulo.getPantallaActual().getBotones();
 
     modulo.getPantallaActual().agregarBotonesAlArray(cargarImagenes(sketch.leerArchivo('/save/imagenes.json')));
+    inicio = true;
 }
 
 function Update(){
-    updateTimer();
+    if (inicio){
+        updateTimer();
+    }
 }
 
 function Click(a){}

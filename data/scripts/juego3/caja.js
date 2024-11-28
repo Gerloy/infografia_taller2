@@ -1,5 +1,6 @@
 //variables para la posicion del puntero que interactue con el boton
 var p_pos;
+var pos;
 var activado = false;
 var colocado = false;
 var mano;
@@ -13,8 +14,9 @@ function Update() {
         if (activado){
             //ESTO ES NECESARIO PARA QUE ANDE CON KINECT
             //DESCOMENTAR PARA PROBARLO CON EL KINECT
-            boton.setPos(sketch.crearVector(boton.getPos().x+(mano.getPos().x-p_pos.x),boton.getPos().y+(mano.getPos().y-p_pos.y)));
-            p_pos = mano.getPos();
+            if(mano == 1){pos=sketch.pos1;}else{pos=sketch.pos2;}
+            boton.setPos(sketch.crearVector(boton.getPos().x+(pos.x-p_pos.x),boton.getPos().y+(pos.y-p_pos.y)));
+            p_pos = pos;
 
             //ESTO ES PARA PROBAR CON EL MOUSE
             //COMENTARLO PARA PROBAR CON EL KINECT
@@ -36,13 +38,20 @@ function Click(_pos) {
         if (!activado) {
             //ESTO ES NECESARIO PARA QUE ANDE CON KINECT
             //DESCOMENTAR PARA PROBARLO CON EL KINECT
-            var manos = sketch.getManos();
-            for (i=0;i<manos.length;i++){
-                if ((manos[i]!=null) && (manos[i].getPos() == _pos)) {
-                    mano = m;
-                }
-            }
-            p_pos = mano.getPos();
+            //var manos = sketch.getManos();
+            //for (i=0;i<manos.length;i++){
+            //    if ((manos[i]!=null) && (manos[i].getPos() == _pos)) {
+            //        mano = m;
+            //    }
+            //}
+            //p_pos = mano.getPos();
+
+            var dist_pos1 = Math.sqrt(Math.pow(sketch.pos1.x-_pos.x),Math.pow(sketch.pos1.y-_pos.y));
+            var dist_pos2 = Math.sqrt(Math.pow(sketch.pos2.x-_pos.x),Math.pow(sketch.pos2.y-_pos.y));
+
+            if(dist_pos1<dist_pos2){mano=1; p_pos=sketch.pos1;}else{mano=2; p_pos=sketch.pos2;}
+
+            //if (_pos == sketch.pos1){mano = 1; p_pos=sketch.pos1;}else if (_pos == sketch.pos2){mano = 2; p_pos=sketch.pos2;}
 
             //ESTO ES PARA PROBAR CON EL MOUSE
             //COMENTARLO PARA PROBAR CON EL KINECT

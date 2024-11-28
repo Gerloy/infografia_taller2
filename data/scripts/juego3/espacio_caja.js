@@ -20,7 +20,9 @@ function Init(){
 function Update(){hover = false;}
 
 function Dibujar(){
-	barrita.render();
+    if(barrita != null){
+	    barrita.render();
+    }
 }
 
 function Click(a){}

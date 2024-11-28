@@ -27,8 +27,8 @@ PImage cargando;
 Animacion logo;
 
 void setup() {
-  //size(1280, 720, OPENGL);
-  fullScreen(P2D);
+  size(1280, 720, OPENGL);
+  //fullScreen(OPENGL);
   frameRate(60);
   textAlign(CENTER);
   textSize(20);
@@ -44,10 +44,16 @@ void setup() {
   context.startGesture(SimpleOpenNI.GESTURE_HAND_RAISE);
   context.startGesture(SimpleOpenNI.GESTURE_CLICK);
 
+<<<<<<< Updated upstream
 
   path_mod = "data/modulos/mod2.json";
   //path_mod = "data/modulos/mod2.json";
   estado = Estado.MANDAR_A_CARGAR;
+=======
+  //path_mod = "data/modulos/devolucion.json";
+  path_mod = "data/modulos/juego3.json";
+  estado = Estado.CARGAR_CARGANDO;
+>>>>>>> Stashed changes
   pos1 = new Vector2(0, 0);
   pos2 = new Vector2(1000, 1000);
   time = new Time();
@@ -65,15 +71,24 @@ void draw() {
 
   case MANDAR_A_CARGAR:
     thread("cargarModulo");
+    thread("UPDATE");
     estado = Estado.CARGANDO;
     break;
 
   case JUGANDO:
-    context.update();
-    pos1.set(mouseX, mouseY);
-    mod.update(pos1, pos2);
+    //context.update();
+    //pos1.set(mouseX, mouseY);
+    //mod.update(pos1, pos2);
     mod.draw();
-    updateInfo();
+    //dibujarManos();
+    pushStyle();
+    fill(255, 255, 255, 0);
+    strokeWeight(6);
+    stroke(255, 255, 255);
+    ellipse(pos1.x, pos1.y, 100, 100);
+    ellipse(pos2.x, pos2.y, 100, 100);
+    popStyle();
+    //updateInfo();
     break;
     
   case CARGAR_CARGANDO:
@@ -90,6 +105,19 @@ void draw() {
   default:
     text("Rompiste todo pelotudo", width*0.5, height*0.5);
     break;
+  }
+}
+
+void UPDATE(){ //<>//
+  println("Se llamo");
+  while(true){
+    //println("actualiza");
+    context.update();
+    updateInfo();
+    if (estado == Estado.JUGANDO){ //<>//
+      mod.update(pos1, pos2);
+    }
+    delay(16);
   }
 }
 
@@ -115,21 +143,23 @@ void updateInfo() {
       }
     }
   }
+  if (manos[0] != null) {
+    pos1 = manos[0].pos;
+  }// else {
+  //  pos1 = new Vector2(2000, 2000);
+  //}
+  if (manos[1] != null) {
+    pos2 = manos[1].pos;
+  }// else {
+    //pos2 = new Vector2(2000, 2000);
+  //}
+}
 
-  for (int i=0; i<manos.length; i++) {
+void dibujarManos(){
+    for (int i=0; i<manos.length; i++) {
     if (manos[i]!=null) {
       manos[i].dibujar();
     }
-  }
-  if (manos[0] != null) {
-    pos1 = manos[0].pos;
-  } else {
-    pos1 = new Vector2(2000, 2000);
-  }
-  if (manos[1] != null) {
-    pos2 = manos[1].pos;
-  } else {
-    pos2 = new Vector2(2000, 2000);
   }
 }
 
@@ -403,10 +433,6 @@ public class Animacion {
       }
       t-=cooldown;
     }
-    
-    //ESTO ES PARA PROBAR EL CLICK CON EL MOUSE
-    //DESCONECTARLO PARA USAR KINECT
-    pos1 = new Vector2(mouseX,mouseY);
   }
 
   public void render() {
