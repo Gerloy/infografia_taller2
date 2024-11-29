@@ -15,7 +15,16 @@
             ],
             "Script": {
                 "path": "scripts/tutorial_juegos.js",
-                "Variables": []
+                "Variables": [
+                    {
+                        "nombre": "id",
+                        "valor": "2"
+                    },
+                    {
+                        "nombre": "frames",
+                        "valor": "6"
+                    }
+                ]
             }
         },
         {
@@ -73,7 +82,7 @@
                     },
                     {
                         "nombre": "actual_time",
-                        "valor": "67000"
+                        "valor": "50000"
                     },
                     {
                         "nombre": "segs",

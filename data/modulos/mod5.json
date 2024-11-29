@@ -397,36 +397,55 @@
         {
             "Botones":[
                 {
-                    "posx":282,
-                    "posy":210,
-                    "tamx":752,
-                    "tamy":521,
+                    "posx":565,
+                    "posy":524,
+                    "tamx":214,
+                    "tamy":208,
                     "colFR": 255,
                     "colFG": 255,
                     "colFB": 255,
-                    "colFA": 255,
+                    "colFA": 0,
                     "colSR": 255,
                     "colSG": 255,
                     "colSB": 255,
-                    "colSA": 255,
+                    "colSA": 0,
                     "Script": {
-                        "path": "scripts/boton_mod3.js",
+                        "path": "scripts/mod5/hover_pantalla2.js",
                         "Variables": [
                             {
                                 "nombre": "id",
-                                "valor": "3"
+                                "valor": "0"
                             },
                             {
                                 "nombre": "img",
                                 "valor": "imagenes/modulo4/pan2/nose.png"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "posx":556,
+                    "posy":146,
+                    "tamx":214,
+                    "tamy":208,
+                    "colFR": 255,
+                    "colFG": 255,
+                    "colFB": 255,
+                    "colFA": 0,
+                    "colSR": 255,
+                    "colSG": 255,
+                    "colSB": 255,
+                    "colSA": 0,
+                    "Script": {
+                        "path": "scripts/mod5/hover_pantalla2.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "1"
                             },
                             {
-                                "nombre": "img_selec",
+                                "nombre": "img",
                                 "valor": "imagenes/modulo4/pan2/noses.png"
-                            },
-                            {
-                                "nombre": "select",
-                                "valor": "4"
                             }
                         ]
                     }
@@ -436,7 +455,7 @@
             ],
             "Fondo":"imagenes/intro/fondointro.png",
             "Script":{
-                    "path":"scripts/vacio.js",
+                    "path":"scripts/mod5/general_pantalla2.js",
                     "Variables":[]
             },
             "Imagenes":[
@@ -473,7 +492,7 @@
             "Animaciones":[
 
                 {
-                    "cooldown":2000,
+                    "cooldown":10000,
                     "repite": true,
                     "posx":1,
                     "posy":1,
@@ -658,7 +677,7 @@
                 {
                     "posx": 53,
                     "posy": 377,
-                    "tamx": 543,
+                    "tamx": 583,
                     "tamy": 132,
                     "colFR": 0,
                     "colFG": 0,
@@ -729,7 +748,7 @@
                       "posy":14,
                       "tamx":276,
                       "tamy":45
-                  }
+                }
             ],
             "Animaciones":[]
         },
@@ -1646,5 +1665,5 @@
         "Variables": []
     }
     ,
-    "Siguiente": "mod2.json"
+    "Siguiente": "mod1.json"
 }

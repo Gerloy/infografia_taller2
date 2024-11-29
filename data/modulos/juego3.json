@@ -15,7 +15,16 @@
             ],
             "Script": {
                 "path": "scripts/tutorial_juegos.js",
-                "Variables": []
+                "Variables": [
+                    {
+                        "nombre": "id",
+                        "valor": "3"
+                    },
+                    {
+                        "nombre": "frames",
+                        "valor": "11"
+                    }
+                ]
             }
         },
         {

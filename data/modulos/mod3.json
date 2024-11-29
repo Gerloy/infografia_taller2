@@ -303,21 +303,32 @@
 
 
         {
-            "Botones":[],
-            "Fondo":"imagenes/intro/fondointro.png",
+            "Botones":[
+                {
+                    "posx": 712,
+                    "posy": 169,
+                    "tamx": 446,
+                    "tamy": 446,
+                    "colFR": 11,
+                    "colFG": 35,
+                    "colFB": 59,
+                    "colFA": 0,
+                    "colSR": 11,
+                    "colSG": 35,
+                    "colSB": 59,
+                    "colSA": 0,
+                    "Script": {
+                        "path": "scripts/mod2/grafico_torta.js",
+                        "Variables": []
+                    }
+                }
+            ],
+            "Fondo":"imagenes/modulo2/pan2/mod2pant2.png",
             "Script":{
                     "path":"scripts/vacio.js",
                     "Variables":[]
             },
-            "Imagenes":[
-                {
-                    "path":"imagenes/modulo2/pan2/mod2pant2.png",
-                    "posx":1,
-                    "posy":1,
-                    "tamx":1280,
-                    "tamy":720
-                }
-            ],
+            "Imagenes":[],
             "Animaciones":[]
         },
 

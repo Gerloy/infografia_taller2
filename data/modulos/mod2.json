@@ -296,26 +296,14 @@
             ]
         },
 
-
-
-
-
         {
             "Botones":[],
-            "Fondo":"imagenes/intro/fondointro.png",
+            "Fondo":"imagenes/modulo1/pan2/mod2pant2.png",
             "Script":{
                     "path":"scripts/vacio.js",
                     "Variables":[]
             },
-            "Imagenes":[
-                {
-                    "path":"imagenes/modulo1/pan2/mod2pant2.png",
-                    "posx":1,
-                    "posy":1,
-                    "tamx":1280,
-                    "tamy":720
-                }
-            ],
+            "Imagenes":[],
             "Animaciones":[]
         },
 
@@ -916,14 +904,6 @@
                         {
                             "path":"imagenes/intro/pant1/cuerpo/frame_60_delay-0.03s.png"
                         }
-
-                        
-
-                        
-
-                        
-
-
                     ]
                 },
 
@@ -950,28 +930,12 @@
                         {
                             "path":"imagenes/modulo1/pan5/mod2pant5d.png"
                         }
-                
-    
-
-                        
-
-                        
-
-
                     ]
                 }
             ]
 
             
         }
-
-
-
-
-
-
-    
-        
     ],
     "Script": {
         "path": "scripts/pant2.js",

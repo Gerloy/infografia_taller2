@@ -44,7 +44,7 @@ void setup() {
   context.startGesture(SimpleOpenNI.GESTURE_HAND_RAISE);
   context.startGesture(SimpleOpenNI.GESTURE_CLICK);
   
-  path_mod = "data/modulos/mod5.json";
+  path_mod = "data/modulos/mod1.json";
   estado = Estado.CARGAR_CARGANDO;
   pos1 = new Vector2(0, 0);
   pos2 = new Vector2(1000, 1000);
@@ -63,14 +63,15 @@ void draw() {
 
   case MANDAR_A_CARGAR:
     thread("cargarModulo");
-    thread("UPDATE");
+    //thread("UPDATE");
     estado = Estado.CARGANDO;
     break;
 
   case JUGANDO:
-    //context.update();
+    context.update();
+    pos2 = pos1;
     //pos1.set(mouseX, mouseY);
-    //mod.update(pos1, pos2);
+    mod.update(pos1, pos2);
     mod.draw();
     //dibujarManos();
     pushStyle();
@@ -80,7 +81,7 @@ void draw() {
     ellipse(pos1.x, pos1.y, 100, 100);
     ellipse(pos2.x, pos2.y, 100, 100);
     popStyle();
-    //updateInfo();
+    updateInfo();
     break;
     
   case CARGAR_CARGANDO:
@@ -105,8 +106,8 @@ void UPDATE(){ //<>//
   while(true){
     //println("actualiza");
     context.update();
-    //updateInfo();
-    pos1=new Vector2(mouseX,mouseY);
+    updateInfo();
+    //pos1=new Vector2(mouseX,mouseY);
     if (estado == Estado.JUGANDO){ //<>//
       mod.update(pos1, pos2);
     }
@@ -127,13 +128,15 @@ void updateInfo() {
       PVector p2d = new PVector();
 
       context.convertRealWorldToProjective(p, p2d);
-      for (int i=0; i<manos.length; i++) {
-        if (manos[i]!=null) {
-          if (manos[i].idCoincide(handId)) {
-            manos[i].setPos(escalar(new Vector2(map(p2d.x, 0, 640, 0, 1280), map(p2d.y, 0, 480, 0, 720))));
-          }
-        }
-      }
+      //for (int i=0; i<manos.length; i++) {
+      //  if (manos[i]!=null) {
+      //    if (manos[i].idCoincide(handId)) {
+      //      manos[i].setPos(escalar(new Vector2(map(p2d.x, 0, 640, 0, 1280), map(p2d.y, 0, 480, 0, 720))));
+      //    }
+      //  }
+      //}
+      pos2= pos1;
+      pos1.setPos(escalar(new Vector2(map(p2d.x, 0, 640, 0, 1280), map(p2d.y, 0, 480, 0, 720))));
     }
   }
   if (manos[0] != null) {
@@ -334,6 +337,11 @@ public static class Vector2 {
   }
   public float getY() {
     return y;
+  }
+  
+  public void setPos(Vector2 _pos){
+    x = _pos.getX();
+    y = _pos.getY();
   }
 }
 

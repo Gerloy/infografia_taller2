@@ -1,8 +1,22 @@
+var img_selec;
+var selecciono;
+var cool_selec = 2000;
+var t_selec = 0;
+
 function Init(){
+    img_select=sketch.hacerImagen("imagenes/juego2/selec.png",sketch.escalar(sketch.crearVector(365,121)),sketch.escalar(sketch.crearVector(567,567)));
 }
 
 function Update(){
     updateTimer();
+    if(selecciono){
+        t_selec+=sketch.time.DeltaTime();
+        if(t_selec>=cool_selec){
+            selecciono = false;
+            pantalla.getBotones()[0].metodos.invokeFunction("cambiarImg");
+            t_selec = 0;
+        }
+    }
 }
 
 function Click(a){}
@@ -10,6 +24,10 @@ function Click(a){}
 function Dibujar(){
     //Mostrar texto del cronometro
     sketch.texto((segs +":"+parseInt((((actual_time/1000)-segs).toFixed(2))*100)), sketch.crearVector(653,68));
+    if(selecciono){
+        img_select.render();
+        pantalla.getBotones()[0].metodos.invokeFunction("Dibujar");
+    }
 }
 
 //Variables
@@ -42,3 +60,5 @@ function guardarImagenes(){
     sketch.escribirArchivo('data/save/imagenes.json',json);
 
 }
+
+function Selecciono(){selecciono=true;}
