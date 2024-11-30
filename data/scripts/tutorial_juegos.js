@@ -12,7 +12,11 @@ function Init(){
     for(var i=0;i<frames;i++){
         f[i] = "imagenes/juego"+id+"/tuto/"+i+".png";
     }
-    ani = sketch.crearAnimacion(f,sketch.escalar(sketch.crearVector(439,268)),sketch.escalar(sketch.crearVector(427,427)),500,true);
+    if (id == 1){
+        ani = sketch.crearAnimacion(f,sketch.escalar(sketch.crearVector(307,97)),sketch.escalar(sketch.crearVector(676,676)),500,true);
+    }else{
+        ani = sketch.crearAnimacion(f,sketch.escalar(sketch.crearVector(439,268)),sketch.escalar(sketch.crearVector(427,427)),500,true);
+    }
 }
 
 function Update(){

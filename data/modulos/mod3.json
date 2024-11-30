@@ -298,10 +298,6 @@
             ]
         },
 
-
-
-
-
         {
             "Botones":[
                 {
@@ -331,8 +327,6 @@
             "Imagenes":[],
             "Animaciones":[]
         },
-
-
 
         {
             "Botones":[],
@@ -420,22 +414,106 @@
         },
 
         {
-            "Botones":[],
+            "Botones":[
+                {
+                    "posx": 119,
+                    "posy": 217,
+                    "tamx": 165,
+                    "tamy": 165,
+                    "colFR": 11,
+                    "colFG": 35,
+                    "colFB": 59,
+                    "colFA": 0,
+                    "colSR": 11,
+                    "colSG": 35,
+                    "colSB": 59,
+                    "colSA": 0,
+                    "Script": {
+                        "path": "scripts/mod3/bot_pant5.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "0"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "posx": 298,
+                    "posy": 217,
+                    "tamx": 165,
+                    "tamy": 165,
+                    "colFR": 11,
+                    "colFG": 35,
+                    "colFB": 59,
+                    "colFA": 0,
+                    "colSR": 11,
+                    "colSG": 35,
+                    "colSB": 59,
+                    "colSA": 0,
+                    "Script": {
+                        "path": "scripts/mod3/bot_pant5.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "1"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "posx": 478,
+                    "posy": 217,
+                    "tamx": 165,
+                    "tamy": 165,
+                    "colFR": 11,
+                    "colFG": 35,
+                    "colFB": 59,
+                    "colFA": 0,
+                    "colSR": 11,
+                    "colSG": 35,
+                    "colSB": 59,
+                    "colSA": 0,
+                    "Script": {
+                        "path": "scripts/mod3/bot_pant5.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "posx": 658,
+                    "posy": 217,
+                    "tamx": 165,
+                    "tamy": 165,
+                    "colFR": 11,
+                    "colFG": 35,
+                    "colFB": 59,
+                    "colFA": 0,
+                    "colSR": 11,
+                    "colSG": 35,
+                    "colSB": 59,
+                    "colSA": 0,
+                    "Script": {
+                        "path": "scripts/mod3/bot_pant5.js",
+                        "Variables": [
+                            {
+                                "nombre": "id",
+                                "valor": "3"
+                            }
+                        ]
+                    }
+                }
+            ],
             "Fondo":"imagenes/intro/fondointro.png",
             "Script":{
-                    "path":"scripts/vacio.js",
+                    "path":"scripts/mod3/pant5.js",
                     "Variables":[]
             },
-            "Imagenes":[
-                {
-                    "path":"imagenes/modulo2/pan5/mod2pant5.png",
-                    "posx":1,
-                    "posy":1,
-                    "tamx":1280,
-                    "tamy":720
-                }
-                
-            ],
+            "Imagenes":[],
             "Animaciones":[]
         },
 
