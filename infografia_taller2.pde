@@ -27,8 +27,8 @@ PImage cargando;
 Animacion logo;
 
 void setup() {
-  size(1280, 720, OPENGL);
-  //fullScreen(OPENGL);
+  //size(1280, 720, OPENGL);
+  fullScreen(OPENGL);
   frameRate(60);
   textAlign(CENTER);
   textSize(20);
@@ -44,7 +44,7 @@ void setup() {
   context.startGesture(SimpleOpenNI.GESTURE_HAND_RAISE);
   context.startGesture(SimpleOpenNI.GESTURE_CLICK);
   
-  path_mod = "data/modulos/mod3.json";
+  path_mod = "data/modulos/mod1.json";
   estado = Estado.CARGAR_CARGANDO;
   pos1 = new Vector2(0, 0);
   pos2 = new Vector2(1000, 1000);
@@ -70,7 +70,7 @@ void draw() {
   case JUGANDO:
     context.update();
     pos2 = pos1;
-    pos1.set(mouseX, mouseY);
+    //pos1.set(mouseX, mouseY);
     mod.update(pos1, pos2);
     mod.draw();
     //dibujarManos();
@@ -495,3 +495,5 @@ public class Time {
     return delta;
   }
 }
+
+public Float checkearDist(Vector2 p1, Vector2 p2){return dist(p1.getX(),p2.getX(),p1.getY(),p2.getY());}

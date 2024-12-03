@@ -2,7 +2,7 @@ var hover = false;
 
 function Init(){
     var tam = sketch.escalar(sketch.crearVector(465,234)); 
-    var pos = sketch.escalar(sketch.crearVector(443,tam.getY()*id))
+    var pos = sketch.escalar(sketch.crearVector(443,234*id))
     img.setPos(pos);
     img.setTam(tam);
 }

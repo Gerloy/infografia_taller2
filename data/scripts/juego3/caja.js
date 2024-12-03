@@ -37,7 +37,7 @@ function Dibujar() {
 
 function Click(_pos) {
     if(!colocado){
-        if (!activado) {
+        /*if (!activado) {
             //ESTO ES NECESARIO PARA QUE ANDE CON KINECT
             //DESCOMENTAR PARA PROBARLO CON EL KINECT
             //var manos = sketch.getManos();
@@ -58,13 +58,13 @@ function Click(_pos) {
             //p_pos = sketch.pos1;
 
             activado = true;
-        }else{
+        }elseif(activado){
             var pant = modulo.getPantallaActual();
             if(pant.metodos.invokeFunction("hayEspacioEnHover")){
                 pant.metodos.invokeFunction("agregarCaja",id);
             }
             activado = false;
-        }
+        }*/
     }
 }
 
@@ -98,3 +98,15 @@ function setimg(_selec) {
 function getId(){return id;}
 function getActivado(){return activado;}
 
+function agarrar(){
+    p_pos = sketch.pos1;
+    activado = true;
+}
+
+function soltar(){
+        var pant = modulo.getPantallaActual();
+        if(pant.metodos.invokeFunction("hayEspacioEnHover")){
+            pant.metodos.invokeFunction("agregarCaja",id);
+        }
+        activado = false;
+}

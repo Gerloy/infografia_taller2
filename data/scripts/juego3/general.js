@@ -2,12 +2,15 @@
 var inicio = false;
 var agarroCaja = false;
 var espacios;
+var botones;
+var bid = -1;
 
 function Init(){
     //Estos son los containers de las cajas cuando las metes en la pila
     espacios = modulo.getPantallaActual().getBotones();
 
     modulo.getPantallaActual().agregarBotonesAlArray(cargarImagenes(sketch.leerArchivo('/save/imagenes.json')));
+    botones = modulo.getPantallaActual().getBotones();
     inicio = true;
 }
 
@@ -17,7 +20,34 @@ function Update(){
     }
 }
 
-function Click(a){}
+function Click(pos1){
+    if(botones!=null){
+        var min_dist = 10000;
+        if(!agarroCaja){
+            bid = -1;
+
+            for (var i=7;i<botones.length;i++){
+                if(botones[i]!=null && !botones[i].metodos.invokeFunction("getActivado")){
+                    var actual_dist = sketch.checkearDist(botones[i].getPos(),pos1);                        
+                    if(actual_dist<min_dist){
+                        min_dist = actual_dist;
+                        bid = i;
+                    }
+                }
+            }
+            print(bid);
+            botones[bid].metodos.invokeFunction("agarrar");
+        agarraCaja();
+        }else{
+            botones[bid].metodos.invokeFunction("soltar");
+            sueltaCaja();
+
+        }
+        //agarrarCaja(bid);
+        
+
+    }
+}
 
 function Dibujar(){
     //Mostrar texto del cronometro
